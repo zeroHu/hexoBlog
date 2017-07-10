@@ -47,6 +47,7 @@ p1.then(function(resp1Data){
 
 ```
 > 处理多个ajax之间的请求相互不影响，但是最后执行语句的情况是要求所有ajax都已经执行完毕，返回结果的情况
+
 ```
 jquery 的 $.when就是利用promise实现
 <!-- jquery 封装的when -->
@@ -81,8 +82,15 @@ var ajax = function(options){
 		})
 	})
 }
-var p1 = ajax({url:'xxxx',type:'post',data:{xxx:'fff'}}).resolve(),
-	p2 = ajax({url:'xxxx',type:'post',data:{xxx:'fff'}}).resolve(),
-	p3 = ajax({url:'xxxx',type:'post',data:{xxx:'fff'}}).resolve();
+var p1 = ajax({url:'xxxx',type:'post',data:{xxx:'fff'}}),
+	p2 = ajax({url:'xxxx',type:'post',data:{xxx:'fff'}}),
+	p3 = ajax({url:'xxxx',type:'post',data:{xxx:'fff'}});
+Promise.all([p1,p2,p3]).then(function(results){
+    results.forEach(function(result){
+        console.log(result.statusCode);
+    });
+}).catch(function(err){
+    console.log(err);
+});
 
 ```
