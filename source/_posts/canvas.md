@@ -1,7 +1,7 @@
 ---
 title: canvas
 date: 2017-07-10 22:57:22
-tags: canvas
+tags: canvas Image
 ---
 ### canvas
 #### canvas 导入图片 导出图片
