@@ -1,7 +1,7 @@
 ---
 title: ES6-promise
 date: 2017-07-10 19:14:47
-tags: Promise
+tags: ES6 Promise
 ---
 ### promise
 
@@ -138,7 +138,7 @@ testPromise(){
         }
     });
 
-    // 同时请求函数
+    // 异步请求函数
     Promise.all([p1,p2,p3]).then(function(results){
         results.forEach(function(result){
             console.log('all====>',JSON.stringify(result));
@@ -146,18 +146,18 @@ testPromise(){
     }).catch(function(err){
         console.log(err);
     });
-    // 连续函数
-    p1.then(function(resp1){
-        console.log('resp1',JSON.stringify(resp1));
-        console.log(123);
-        return p2.then(function(resp2){
-            console.log('resp2',JSON.stringify(resp2))
-            console.log(234);
-            return p3.then(function(resp3){
-                console.log('resp3',JSON.stringify(resp3));
-                console.log(345);
-            })
-        })
+    // 同步请求函数
+    p1.then(function(resp1) {
+      console.log('resp1', JSON.stringify(resp1));
+      console.log(123);
+      return p2;
+    }).then(function(resp2) {
+      console.log(234);
+      console.log('resp2', JSON.stringify(resp2))
+      return p3;
+    }).then(function(resp3) {
+      console.log(345);
+      console.log('resp3', JSON.stringify(resp3))
     });
 }
 ```
