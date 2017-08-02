@@ -4,7 +4,7 @@ date: 2017-08-02 09:37:33
 tags: Css
 ---
 ### box-shadow
-> box-shadow 阴影是我们经常用的一个属性，但是却经常想不起来单边的阴影写法，记录下来，方便查阅（本方法 是查阅css secret 所获
+> box-shadow 阴影是我们经常用的一个属性，但是却经常想不起来单边的阴影写法，记录下来，方便查阅（本方法 是查阅css secret 所获）
 
 #### 投影原理解释
 ![图片](http://oqt0cgoq9.bkt.clouddn.com/box-shadow.jpeg)
