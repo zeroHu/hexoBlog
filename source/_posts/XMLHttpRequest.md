@@ -1,5 +1,5 @@
 ---
-title: ajax
+title: XMLHttpRequest
 date: 2017-08-18 11:00:38
 tags: XMLHttpRequest
 ---
@@ -135,4 +135,13 @@ function sendAjax() {
 * Content-Type的默认值与具体发送的数据类型有关，请参考本文【可以发送什么类型的数据】一节；
 * setRequestHeader必须在open()方法之后，send()方法之前调用，否则会抛错；
 * setRequestHeader可以调用多次，最终的值不会采用覆盖override的方式，而是采用追加append的方式。下面是一个示例代码：
+```
+var xhr = new XMLHttpRequest();
+var url = 'http://xxx.xxx.xxx';
+xhr.open('POST',url,true);
+xhr.setRequestHeader('Content-Type', 'application/xml');
+xhr.onreadystatechange = function(){
+  ...
+}
+```
 
