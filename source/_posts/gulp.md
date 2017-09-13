@@ -58,4 +58,19 @@ gulp.task('js', function() {
 });
 // 运行所有
 gulp.task('default', ['html', 'js', 'css']);//默认任务
+
+// watch 事件
+gulp.task("watch", function () {
+    gulp.watch([
+            path.js + 'index.js',
+            path.js + 'main.js',
+        ], ["js"]);
+
+    gulp.watch([
+            path.css + 'default.scss',
+            path.css + 'index.scss',
+            path.css + 'main.scss',
+        ], ["css"]);
+
+});
 ```
