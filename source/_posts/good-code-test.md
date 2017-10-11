@@ -88,3 +88,45 @@ tags: 算法逻辑题
     }
     console.log(changeLangue(90991));
 ```
+#### 递归经典算法练习
+```
+    // 递归的算法求递加
+    function countage(wpeo) {
+        if (wpeo == 1) {
+            return 10
+        } else {
+            return countage(wpeo - 1) + 2
+        }
+    }
+    console.log(countage(4));
+
+    // 递归乘法
+    function recursive(i) {
+        if (i == 0) {
+            return 1;
+        } else {
+            return i * recursive(i - 1);
+        }
+    }
+    console.log(recursive(3))
+
+
+    // 河内塔问题
+    function heneita(n, a, b, c) {
+        if (n == 1) {
+            alert('--------' + n + a + b + c);
+            // 第二步: 最底下的1个盘子，从A移到C
+            document.write("1111111把编号 " + n + " 个盘子从 " + a + " to " + c + "</br>");
+        } else {
+            alert('*********' + n + a + b + c);
+            // 第一步：把上面（n-1）个盘子从A移到B
+            heneita(n - 1, a, c, b);
+            document.write("22222222把编号 " + n + " 个盘子从 " + a + " to " + c + "</br>")
+            alert('=========' + n + a + b + c);
+            // 第三步：把（n-1）个盘子从B移到C
+            // alert('##########' + n + a + b + c);
+            heneita(n - 1, b, a, c);
+        }
+    }
+    console.log(heneita(3, 'A', 'B', 'C'))
+```
