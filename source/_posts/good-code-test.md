@@ -130,3 +130,51 @@ tags: 算法逻辑题
     }
     console.log(heneita(3, 'A', 'B', 'C'))
 ```
+#### js 数组去重方法之一
+```
+arr 举例 [1,2,1,2,3] || [1,'2',1,2,3]
+function arrUnique(arr){
+    if( Array.isArray(arr) && arr.length >1 ){
+        let n = [arr[0]]
+        arr.forEach(function(val){
+            if(n.indexOf(val) == -1){
+                n.push(val)
+            }
+        })
+        return n;
+    }else{
+        return [];
+    }
+}
+
+
+// 数组去重 定义了可以去重{key:val}
+function arrUnique(arr, key) {
+    var n = [arr[0]];
+    for (var i = 0; i < arr.length; i++) {
+        if (key == undefined) {
+            n.indexOf(arr[i]) == -1 ? n.push(arr[i]) : '';
+        } else {
+            var flag = true;
+            for(var j=0;j<n.length;j++){
+                // 判断是数组的入口
+                if(typeof(arr[i][key])=='undefined' && typeof(n[j][key])=='undefined'){
+                    n.indexOf(arr[i]) == -1 ? '' : flag = false;
+                }else{
+                    if(typeof(arr[i][key])!='undefined' && (arr[i][key] == n[j][key])){
+                        flag = false;
+                        break;//已经判断有相同了可以跳出n循环了
+                    }
+                }
+            }
+            if(flag){
+                n.push(arr[i]);
+            }
+        }
+    }
+    return n;
+}
+var thenew = arrUnique([12,3,1,12,1,5]);//[12, 3, 1, 5]
+var thenew = arrUnique([1,{id:'id',name:'jianxia'},3,3,{id:'id',name:"zero"},1],'id');//[1,{"id":"id","name":"jianxia"},3]
+console.log(JSON.stringify(thenew));
+```
