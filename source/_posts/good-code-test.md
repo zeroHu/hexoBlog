@@ -100,6 +100,24 @@ tags: 算法逻辑题
     }
     console.log(countage(4));
 
+
+
+    // for循环实现阶乘函数
+    function jiecheng(num){
+        if(num <0) {
+            return -1;
+        }else if(num === 0 || num === 1){
+            return 1;
+        }else {
+            for(var i= num-1; i>=1; i--){
+                 num = num*i;
+            }
+            return num;
+        }
+    }
+    console.log('阶乘函数结果是===>',jiecheng(10));
+
+
     // 递归乘法
     function recursive(i) {
         if (i == 0) {
@@ -128,7 +146,9 @@ tags: 算法逻辑题
             heneita(n - 1, b, a, c);
         }
     }
-    console.log(heneita(3, 'A', 'B', 'C'))
+    console.log(heneita(3, 'A', 'B', 'C'));
+
+!!!! 递归数量过大存在栈溢出问题 可以使用尾递归优化，更建议使用for循环 如果是递归数量过大的时候
 ```
 #### js 数组去重方法之一
 ```
