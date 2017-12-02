@@ -1,7 +1,7 @@
 ---
 title: ES6-promise
 date: 2017-07-10 19:14:47
-tags: ES6 Promise
+tags: ES6
 ---
 ### promise
 

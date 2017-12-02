@@ -1,7 +1,7 @@
 ---
-title: css3居中小结
+title: css3 居中小结
 date: 2017-07-18 18:30:10
-tags: CSS
+tags: Css
 ---
 ### CSS居中
 #### 水平居中初探

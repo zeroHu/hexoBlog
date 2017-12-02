@@ -1,65 +1,90 @@
 ---
 title: canvas
 date: 2017-07-10 22:57:22
-tags: canvas Image
+tags: canvas
 ---
 ### canvas
-#### canvas 导入图片 导出图片
-```html
-<!doctype html>
-<html>
+#### canvas 知识点总结
+> 文本样式
+```
+var canvas = document.getElementById('canvasId').getContext("2d");
+canvas.fillStyle = "#3e454c";
+canvas.font = `${that.date.fontsize}px serif`;
+```
+> fillText 文本居中
+```
+canvas.textAlign = "center";
+<!-- that.canvas.width 指的是定义的canvas宽度大小 可以获取 可以直接设值 -->
+canvas.fillText(name, this.canvas.width/2, that.name.top);
+```
+> 图片base64地址获取
+```
+在全部画完之后
+var canvas  = document.getElementById('canvasId');
+var imgbase64 = canvas.toDataURL("image/jpeg", 1);# 只有jpeg压缩有效果
+var imgbase64 = canvas.toDataURL("image/png", 1);# 这样压缩无效果
+var imgbase64 = canvas.toDataURL();# 不指定图片类型，不压缩
+```
 
-<head>
-    <meta charset="UTF-8">
-    <title>插入图片</title>
-    <style type="text/css">
-    body {
-        background: #fff;
+> 文本折行 回车\n 能够折行的效果
+```
+var introcontent = content.split('\n');
+var addHeight = 0;
+<!-- 处理\n -->
+introcontent.forEach(function(val,firstindex){
+    if(firstindex == 0){
+        addHeight = 0;
+    }else{
+        <!-- 获取addHeight值 -->
+        var textFnArr = that.textBranch(codeid, introcontent[firstindex-1], that.text.maxWidth);
+        textFnArr.forEach(function(word, index){
+            if(index == textFnArr.length-1){
+                addHeight += that.text.lineHeight*(textFnArr.length);
+            }
+        });
     }
-    
-    #oc {
-        background: #ccc;
+    <!-- 处理折行 -->
+    <!-- textBranch 值 codeid 是canvasId号，写入的文本内容，文本最大宽度 -->
+    that.textBranch(codeid, introcontent[firstindex], that.text.maxWidth).forEach(function(word, index){
+        <!-- fillText参数 ： text , x , y -->
+        canvas.fillText(word, that.text.left, that.text.lineHeight * index + that.text.top + addHeight);
+    });
+});
+// 文本换行
+textBranch(codeid, text, width, font) {
+    var that = this;
+    var canvas = document.getElementById(codeid);
+    var context = canvas.getContext('2d');
+    var result = [];
+    var breakPoint = 0;
+    while ((breakPoint = findBreakPoint(text, width, context)) !== -1) {
+        result.push(text.substr(0, breakPoint));
+        text = text.substr(breakPoint);
     }
-    </style>
-    <script type="text/javascript">
-    window.onload = function() {
-        var Oc = document.getElementById("oc");
-        var Gc = Oc.getContext("2d");
-        var yImg = new Image();
-        // yImg.crossOrigin = "Anonymous";
-
-        yImg.src = "./888.png";
-        yImg.onload = function() {
-            draw(this);
-
-            // 导出图片
-            var canvas = document.getElementById('oc');
-            var dataURL = canvas.toDataURL();
-            console.log('dataurl', dataURL);
-            var imgResult = document.createElement('img')
-            imgResult.src = dataURL;
-            document.getElementById('div1').appendChild(imgResult)
-
-        };
-
-        function draw(obj) {
-            Gc.drawImage(obj, 0, 0, 148, 62); //插入图片
-            // 给某一个区域插入背景图片,并设置平铺方式
-            var bg = Gc.createPattern(obj, "repeat");
-            Gc.fillStyle = bg;
-            Gc.fillRect(0, 0, 200, 200);
-        };
-
+    if (text) {
+        result.push(text);
     }
-    </script>
-</head>
+    return result;
 
-<body>
-    <canvas id="oc" width="400" height="400">
-        <span>不支持canvas的浏览器</span>
-    </canvas>
-    <div id="div1"></div>
-</body>
+    // 计算字符
+    function findBreakPoint(text, width, context){
+        var min = 0;
+        var max = text.length - 1;
 
-</html>
+        while (min <= max) {
+            var middle = Math.floor((min + max) / 2);
+            var middleWidth = context.measureText(text.substr(0, middle)).width;
+            var oneCharWiderThanMiddleWidth = context.measureText(text.substr(0, middle + 1)).width;
+            if (middleWidth <= width && oneCharWiderThanMiddleWidth > width) {
+                return middle;
+            }
+            if (middleWidth < width) {
+                min = middle + 1;
+            } else {
+                max = middle - 1;
+            }
+        }
+        return -1;
+    }
+}
 ```
