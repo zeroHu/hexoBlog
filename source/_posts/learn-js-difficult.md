@@ -42,6 +42,7 @@ var person2 = new Person('john','20');
 ```
 #### 闭包
 > 闭包指的是有权访问另一个函数作用域中的变量，创建闭包的常见方式，就是在一个函数内部创建另一个函数
+
 ```
 典型的闭包示例
 function createComparisonFunction(protypeName){
@@ -80,8 +81,9 @@ function jisu(){
 }
 ```
 #### 面向对象程序设计
-```
+
 理解对象
+```
 var person = new Object();
 person.name = 'zero';
 person.age = '20';
@@ -102,6 +104,86 @@ var person = {
 }
 ```
 
+#### 创建对象的多种方式以及优缺点
+
+##### 1.工厂模式
+
+> 感觉这是我在日常写重复函数中最长用到的一个啊，比如处理校验，或者处理重复数组之类的，这样的可能会多次遇到的函数 我都会提出到一个util函数里面，需要就直接传入参数，直接调用
+
+```
+    function createPerson(name){
+        var o = new Object();
+        o.name = name;
+        o.getName = function(){
+            console.log(this.name)
+        }
+        return o;
+    }
+
+    var person1 = createPerson('zero');
+```
+> 缺点：对象无法识别，因为所有的实例都指向一个原型
+
+##### 2.构造函数模式
+```
+    function Person(name){
+        this.name = name;
+        this.getName = function(){
+            console.log(this.name);
+        }
+    }
+    var person1 = new Person('zero');
+```
+> 缺点：每次创建实例时，每个方法都要被创建一次
+  优点：实例可以识别为一个特定的类型
+
+##### 3.原型模式
+```
+    function Person(name){
+
+    }
+    Person.prototype.name = 'zero';
+    Person.prototype.getName = function(){
+        console.log(this.name)
+    }
+    var person1 = new Person();
+```
+> 优点：方法不会被重建
+  缺点 所有的属性和方法都共享，不能初始化参数
+
+原型模式优化
+
+```
+  function Person(name){
+  }
+  Person.prototype = {
+    name : 'zero',
+    getName : function(){
+        console.log(this.name);
+    }
+  }
+  var person1 = new Person();
+
+```
+> 优点：封装性好一点
+  缺点： 重写了原型，丢失了constructor属性
+
+##### 4.组合模式
+```
+function Person(name){
+    this.name = name;
+}
+Person.prototype = {
+    constructor:Person,
+    getName:function(){
+        console.log(this.name);
+    }
+    var person1 = new Person();
+}
+```
+
+> 优点: 该共享的共享，该私有的私有，使用最广泛性
+  缺点: 还是不符合有的人想全部写一起，即是最好的封装性
 
 
 
