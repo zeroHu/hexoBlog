@@ -1,5 +1,5 @@
 ---
-title: type-of-topic-judge
+title: type-of-topic-judge（类型判断）
 date: 2017-12-12 14:32:55
 tags: javascript
 ---

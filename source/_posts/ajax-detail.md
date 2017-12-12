@@ -1,7 +1,7 @@
 ---
-title: ajax-detail
+title: ajax 请求参数详情，cache 理解
 date: 2017-08-18 15:56:38
-tags: ajax
+tags: XMLHttpRequest
 ---
 ### url参数详解
 > 参阅文章(http://www.cnblogs.com/lexus/archive/2012/02/21/2360944.html)

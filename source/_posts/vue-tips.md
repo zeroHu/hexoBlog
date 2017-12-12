@@ -1,7 +1,7 @@
 ---
 title: vue-nginx
 date: 2017-11-24 11:17:09
-tags: Vue
+tags: nginx
 ---
 #### vue 之nginx配置
 > vue的项目如果是配置在域名根目录下(http://xxx.xx.com)，那就是非常简单 没啥好说的直接上nginx代码

@@ -1,7 +1,7 @@
 ---
 title: js-copy
 date: 2017-07-31 16:06:38
-tags: Copy
+tags: javascript
 ---
 ### js 复制功能
 > 原文地址 http://web.jobbole.com/86054/

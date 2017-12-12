@@ -1,7 +1,7 @@
 ---
-title: class-array-object
+title: class-array-object（类数组对象）
 date: 2017-12-08 15:17:13
-tags: 类数组对象
+tags: javascript
 ---
 #### 类数组对象
 

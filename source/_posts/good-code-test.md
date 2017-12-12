@@ -1,7 +1,7 @@
 ---
 title: good-code-test
 date: 2017-10-10 15:44:48
-tags: 算法逻辑题
+tags: javascript 比较复杂的部分
 ---
 ### 好玩的算法逻辑题总汇
 #### 多重数组展开

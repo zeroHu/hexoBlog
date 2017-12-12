@@ -1,7 +1,7 @@
 ---
-title: fullStackJavascriptWebDevelopment
+title: fullStackJavascriptWebDevelopment(全栈知识点)
 date: 2017-09-12 11:54:35
-tags: 全栈知识点
+tags: javascript
 ---
 ### 全栈掌握知识点自理
 #### 知识点梳理

@@ -1,10 +1,11 @@
 ---
-title: table2excel
+title: table2excel table 转为excel js处理
 date: 2017-07-31 18:05:45
-tags: Table2excel
+tags: javascript
 ---
 ### table转为excel表格
 > 需要借助jQuery
+
 ```html
 <!DOCTYPE HTML>
 <html>
@@ -37,6 +38,9 @@ tags: Table2excel
 </body>
 
 </html>
+```
+
+```javascript
 <script>
 /**
 *   将html的table转成Excel的data协议类型数据，不支持ie

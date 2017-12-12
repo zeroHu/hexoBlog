@@ -1,7 +1,7 @@
 ---
 title: download-img
 date: 2017-11-29 11:47:48
-tags: js 下载图片或者文件
+tags: javascript
 ---
 #### 主要讲解用js下载文件或者图片
 > 起因：因工作需要，用canvas画出了一张图片，图片格式是（base64)

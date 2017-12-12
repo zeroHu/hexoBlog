@@ -1,7 +1,7 @@
 ---
 title: fetch
 date: 2017-08-21 15:07:59
-tags: fetch
+tags: XMLHttpRequest
 ---
 ### Fetch
 > fetch 规范与 jQuery.ajax() 主要有两种方式的不同

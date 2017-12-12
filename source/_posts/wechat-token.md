@@ -1,7 +1,7 @@
 ---
 title: wechat-token
 date: 2017-12-02 16:11:53
-tags: wechat-token
+tags: wechat
 ---
 #### 如何填写微信公众号的基本配置
 ![wehchat-token](http://oqt0cgoq9.bkt.clouddn.com/wechat-token.jpeg)
