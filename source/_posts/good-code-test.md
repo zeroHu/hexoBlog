@@ -4,6 +4,194 @@ date: 2017-10-10 15:44:48
 tags: javascript 比较复杂的部分
 ---
 ### 好玩的算法逻辑题总汇
+
+#### 数组的排列组合
+##### [[1,2],[3,4]] => [[1,3],[1,4],[2,3],[2,4]]
+```
+    function comarr(arr) {
+        var narr = [
+            []
+        ]; //empty
+        for (var i = 0; i < arr.length; i++) {
+            var barr = [];
+            for (var m = 0; m < narr.length; m++) {
+                for (var n = 0; n < arr[i].length; n++) {
+                    barr.push(narr[m].concat(arr[i][n]))
+                }
+            }
+            narr = barr;
+        }
+        return narr;
+    }
+```
+###### 解析过程
+```
+    /*解析过程
+    [[]]
+
+    [[1],[2]]                                                                                          i=0
+
+    [[1,3],[1,4],[2,3],[2,4]]                                                                          i=1
+
+    [[1,3,5],[1,3,6],[1,3,7],[1,4,5],[1,4,6],[1,4,7],[2,3,5],[2,3,6],[2,3,7],[2,4,5],[2,4,6],[2,4,7]]  i=2
+    */
+```
+##### ['a','b','c'] number:2 => [['a','b'],['a','c'],['b','c']]
+```
+    Array.prototype.combinate = function(number, aIn) {
+        debugger;
+        if (!aIn) {
+            // 如果没有aIn 定义为一个空数组
+            var aIn = new Array();
+            // 定义result数组 存储结果
+            this.combinate.aResult = new Array();
+        }
+        for (var i = 0; i < this.length; i++) {
+            var a = aIn.concat(this[i]);
+            var aRest = this.concat();
+            aRest.splice(0, i + 1);
+            if (number && number - 1 <= aRest.length) {
+                aRest.combinate(number - 1, a);
+                if (number == 1) {
+                    this.combinate.aResult.push(a);
+                }
+            }
+        }
+        return this.combinate.aResult;
+    };
+```
+##### 解析过程
+```
+combinateEStack = [
+        thrid3:{
+            thisarray:["c"],
+            number:0,
+            aIn:["b","a"],
+            aResult:[["a","b"],["a","c"]],
+            a:["b","a","c"],
+            aRest:["c"],
+            aRest:[],
+            ===============
+            becasuse number = 0不执行 if 里面的条件句 pop出栈
+            ===============
+            开始执行second2.waitetorun1
+        },
+        thrid2:{
+            thisarray:["b"],
+            number:0,
+            aIn:["a","c"],
+            aResult:[["a","b"]],
+            a:["a","c","b"],
+            aRest:["b"],
+            aRest:[],
+            ===============
+            becasuse number = 0不执行 if 里面的条件句 pop出栈
+            ===============
+            开始执行second1.waitetorun2
+        },
+        thrid1:{
+            thisarray:["c"],
+            number:0,
+            aIn:["a","b"],
+            aResult:[],
+            a:["a","b","c"],
+            aRest:["c"],
+            aRest:[],
+            =================
+            becasuse number = 0不执行 if 里面的条件句 pop出栈
+            =================
+            开始执行second1.waitetorun1
+        },
+        second2:{
+            ****************** //for i=0 循环第一次 总共循环次数 1次
+            thisarray:["c"],
+            number:1,
+            aIn:["b"],
+            aResult:[["a","b"],["a","c"]],
+            a:["b","c"],
+            aRest:["c"],
+            aRest:[],
+            ====================
+            number:1
+            // number && number - 1 <= aRest.length
+            1 && 0 <= 0
+            执行thrid3
+            waitetorun1:aResult.push(a)
+            =====================
+            执行完waitetorun1
+            aResult:[["a","b"],["a","c"],["b","c"]]
+            =====================================
+            for循环完毕 this.length = 1 循环了1次 pop出栈
+        },
+        second1:{
+            ****************** //for i=0 循环第一次   总共循环次数 2次
+            thisarray:["b","c"],//上一个的aRest
+            number:1,
+            aIn:["a"], //上一个的a
+            aResult:[],//总函数的
+            a:["a","b"],//aIn.concat(this[i]);
+            aRest:["b","c"],//thisarray
+            aRest:["c"],//thisarray.splice(0,i+1)
+            ================
+            number:1,
+            // number && number - 1 <= aRest.length
+            1 && 0 < = 1
+            执行thrid1
+            waitetorun1:aResult.push(a)
+            ================
+            执行完waitetorun1
+            aResult:[["a","b"]]
+            ******************* //for i= 1循环第二次
+            a:["a","c"],
+            aRest:["b","c"],
+            aRest:[],
+            ===============
+            number:1,
+            // number && number - 1 <= aRest.length
+            1 && 0 <= 0
+            执行thrid2
+            waitetorun2:aResult.push(a)
+            ==================
+            执行完waitetorun2
+            aResult:[["a","b"],["a","c"]],
+            ==================================
+            for循环完毕 this.length = 2 循环了2次 pop出栈
+
+        },
+        first:{
+            ****************** //for i=0 循环第一次   总共循环次数 3次
+            thisarray:["a","b","c"]
+            number:2,
+            aIn:[],
+            aResult:[],
+            a:["a"],//aIn.concat(this[i]);
+            aRest:["a","b","c"],//this.concat();
+            aRest:["b","c"],//aRest.splice(0, i + 1);
+            =================
+            number:2
+            // number && number - 1 <= aRest.length
+            2 && 1 < = 2
+            开始执行second1
+            ****************** //for i=1 循环第二次
+            a:["b"],//aIn.concat(this[i]);
+            aRest:["a","b","c"],
+            aRest:["c"],
+            ==================
+            number:2,
+            // number && number - 1 <= aRest.length
+            2 && 1 < = 1
+            开始执行second2
+            ****************** //for i=2 循环第三次
+            a:["c"],
+            aRest:["a","b","c"],
+            aRest:[],
+            // number && number - 1 <= aRest.length
+            2 && 1 < = 0  if 条件不执行
+
+        },
+        globalcontext
+    ]
+```
 #### 多重数组展开
 ```
     function flaten1(arr) {
