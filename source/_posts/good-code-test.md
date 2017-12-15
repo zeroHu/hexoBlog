@@ -7,7 +7,7 @@ tags: javascript 比较复杂的部分
 
 #### 数组的排列组合
 ##### [[1,2],[3,4]] => [[1,3],[1,4],[2,3],[2,4]]
-```
+```javascript
     function comarr(arr) {
         var narr = [
             []
@@ -25,7 +25,7 @@ tags: javascript 比较复杂的部分
     }
 ```
 ###### 解析过程
-```
+```javascript
     /*解析过程
     [[]]
 
@@ -37,7 +37,7 @@ tags: javascript 比较复杂的部分
     */
 ```
 ##### ['a','b','c'] number:2 => [['a','b'],['a','c'],['b','c']]
-```
+```javascript
     Array.prototype.combinate = function(number, aIn) {
         debugger;
         if (!aIn) {
@@ -61,7 +61,7 @@ tags: javascript 比较复杂的部分
     };
 ```
 ##### 解析过程
-```
+```javascript
 combinateEStack = [
         thrid3:{
             thisarray:["c"],
@@ -193,7 +193,7 @@ combinateEStack = [
     ]
 ```
 #### 多重数组展开
-```
+```javascript
     function flaten1(arr) {
         var narray = [];
         // 定义处理函数
@@ -225,7 +225,7 @@ combinateEStack = [
     ]]]]));
 ```
 #### 数组里面的数据拼接成最大数
-```
+```javascript
     // 数组里面的数据拼接成最大数
     function maxNumber(arr) {
         function compare(a, b) {
@@ -242,7 +242,7 @@ combinateEStack = [
 
 ```
 #### 长度不超过5位数的 数字转为中文大写
-```
+```javascript
     // 长度不超过5位数的 数字转为中文大写
     function changeLangue(num) {
         console.log('===========', num, "===========");
@@ -277,7 +277,7 @@ combinateEStack = [
     console.log(changeLangue(90991));
 ```
 #### 递归经典算法练习
-```
+```javascript
     // 递归的算法求递加
     function countage(wpeo) {
         if (wpeo == 1) {
@@ -339,8 +339,8 @@ combinateEStack = [
 !!!! 递归数量过大存在栈溢出问题 可以使用尾递归优化，更建议使用for循环 如果是递归数量过大的时候
 ```
 #### js 数组去重方法之一
-```
-arr 举例 [1,2,1,2,3] || [1,'2',1,2,3]
+```javascript
+//arr 举例 [1,2,1,2,3] || [1,'2',1,2,3]
 function arrUnique(arr){
     if( Array.isArray(arr) && arr.length >1 ){
         let n = [arr[0]]

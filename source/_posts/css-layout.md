@@ -1,5 +1,5 @@
 ---
-title: css-layout
+title: css-layout (css布局)
 date: 2017-08-01 10:43:52
 tags: Css
 ---
@@ -7,7 +7,8 @@ tags: Css
 
 #### css 常见的flex 布局篇
 ![图片](http://oqt0cgoq9.bkt.clouddn.com/css-layout-1.jpg)
-```
+```css
+/*css*/
 div.container-flex {
   display: flex;
   width:300px;
@@ -22,8 +23,9 @@ div.container-flex {
 .container-flex .div2 {
   flex: 2;
 }
-
-<!-- flex -->
+```
+```html
+<!-- flex html -->
 <div class="container-flex">
   <div class="div1">
     <img src="http://static-image.xfz.cn/1501208125_337.jpg" alt="">
@@ -35,7 +37,8 @@ div.container-flex {
 
 #### 常见的float布局篇
 ![图片](http://oqt0cgoq9.bkt.clouddn.com/css-layout-2.jpg)
-```
+```css
+/*css*/
 .container-float {
   margin-top: 50px;
   width:300px;
@@ -58,7 +61,8 @@ div.container-flex {
 .container-float .left {
   float: left;
 }
-
+```
+```html
 <!-- float -->
 <div class="container-float">
   <div class="left">
@@ -73,7 +77,8 @@ div.container-flex {
 
 #### 常见的inline-block布局篇
 ![图片](http://oqt0cgoq9.bkt.clouddn.com/css-layout-3.jpg)
-```
+```css
+/*css*/
 .container-inlineBlock div {
   display: inline-block;
   vertical-align: top;
@@ -82,7 +87,8 @@ div.container-flex {
   background: #ccc;
   margin: 10px;
 }
-
+```
+```html
 <!-- inline-block -->
 <div class="container-inlineBlock">
   <div></div>

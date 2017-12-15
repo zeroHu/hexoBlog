@@ -5,22 +5,22 @@ tags: XMLHttpRequest
 ---
 ### ajax的真面目
 #### ajax一直在使用，使用起来相对简单，之前也看过其本质。但是久之就遗忘了。故记录下来
-```
-jquery 的简便使用方法
-    $.ajax({
-        url: 'http://xxxx.xxx.xxx',//请求的url
-        type: 'GET',//请求类型
-        data:{//请求参数
-            key1:value1
-            key2:value2
-        },
-        success:function(res){//成功回调
+```javascript
+  //jquery 的简便使用方法
+  $.ajax({
+      url: 'http://xxxx.xxx.xxx',//请求的url
+      type: 'GET',//请求类型
+      data:{//请求参数
+          key1:value1
+          key2:value2
+      },
+      success:function(res){//成功回调
 
-        },
-        error:function(res){//失败回调
+      },
+      error:function(res){//失败回调
 
-        }
-    })
+      }
+  })
 ```
 #### 何为ajax
 
@@ -39,7 +39,7 @@ jquery 的简便使用方法
 * 传送和接收数据时，没有进度信息，只能提示有没有完成。
 * 受到"同域限制"（Same Origin Policy），只能向同一域名的服务器请求数据。
 
-```
+```javascript
 var xhr = new XMLHttpRequest();
 xhr.open('GET','http://xxx.xxx.xx');
 xhr.send();
@@ -61,38 +61,38 @@ xhr.onreadystatechange = function(){
 * 可以获取服务器端的二进制数据。
 * 可以获得数据传输的进度信息。
 
-```
-1.增加timeout功能
+```javascript
+//1.增加timeout功能
 xhr.timeout = 3000;
 xhr.ontimeout = function(event){
     alert('请求超时！');
 }
 
-2.模拟表单
+//2.模拟表单
 var formData = new FormData();
 formData.append('username', '张三');
 formData.append('id', 123456);
 xhr.send(formData);
 
-3.可以用来处理form表单
+//3.可以用来处理form表单
 var form = document.getElementById('myform');
 var formData = new FormData(form);
 formData.append('secret', '123456'); // 添加一个表单项
 xhr.open('POST', form.action);
 xhr.send(formData);
 
-4.上传文件
+//4.上传文件
 var formData = new FormData();
 for(var i=0;i<files.length;i++){
     formData.append('files[]', files[i]);
 }
 xhr.send(formData);
 
-5.跨域资源共享
-使用"跨域资源共享"的前提，是浏览器必须支持这个功能，而且服务器端必须同意这种"跨域"。如果能够满足上面的条件，则代码的写法与不跨域的请求完全一样。
+//5.跨域资源共享
+//使用"跨域资源共享"的前提，是浏览器必须支持这个功能，而且服务器端必须同意这种"跨域"。如果能够满足上面的条件，则代码的写法与不跨域的请求完全一样。
 
-6.进度信息
-它分成上传和下载两种情况。下载的progress事件属于XMLHttpRequest对象，上传的progress事件属于XMLHttpRequest.upload对象。
+//6.进度信息
+//它分成上传和下载两种情况。下载的progress事件属于XMLHttpRequest对象，上传的progress事件属于XMLHttpRequest.upload对象。
 xhr.onprogress = updateProgress;
 xhr.upload.onprogress = updateProgress;
 function updateProgress(event) {
@@ -102,7 +102,7 @@ function updateProgress(event) {
 }
 ```
 #### ajax封装
-```
+```javascript
 function sendAjax() {
   //构造表单数据
   var formData = new FormData();
@@ -135,7 +135,7 @@ function sendAjax() {
 * Content-Type的默认值与具体发送的数据类型有关，请参考本文【可以发送什么类型的数据】一节；
 * setRequestHeader必须在open()方法之后，send()方法之前调用，否则会抛错；
 * setRequestHeader可以调用多次，最终的值不会采用覆盖override的方式，而是采用追加append的方式。下面是一个示例代码：
-```
+```javascript
 var xhr = new XMLHttpRequest();
 var url = 'http://xxx.xxx.xxx';
 xhr.open('POST',url,true);

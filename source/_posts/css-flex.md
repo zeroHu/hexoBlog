@@ -6,7 +6,8 @@ tags: Css
 ### CSS flex 初探
 #### flex 一行多个单元格布局
 ![图片](http://oqt0cgoq9.bkt.clouddn.com/css-flex-1.jpg)
-```
+```css
+/*css内容*/
 .flex-container {
     width: 30px;
     height: 30px;
@@ -19,7 +20,9 @@ tags: Css
     flex:1;
     border: 1px solid #333;
 }
-
+```
+```html
+<!-- html 内容 -->
 <div class="flex-container">
     <div>1</div>
     <div>2</div>
@@ -28,7 +31,8 @@ tags: Css
 ```
 #### flex布局之垂直居中
 ![图片](http://oqt0cgoq9.bkt.clouddn.com/css-flex-2.jpg)
-```
+```css
+/*css内容*/
 .flex-middle-center {
     width: 100px;
     height:100px;
@@ -42,6 +46,9 @@ tags: Css
     border:1px solid #333;
     text-align: center;
 }
+```
+```html
+<!-- html 内容 -->
 <div class="flex-middle-center">
     <div>1</div>
 </div>
@@ -49,7 +56,8 @@ tags: Css
 
 #### flex布局之 数列排序
 ![图片](http://oqt0cgoq9.bkt.clouddn.com/css-flex-3.jpg)
-```
+```css
+/*css内容*/
 .flex-column {
     display: flex;
     flex-direction: column;
@@ -62,6 +70,9 @@ tags: Css
     width: 30px;
     border:1px solid #333;
 }
+```
+```html
+<!-- html 内容 -->
 <div class="flex-column">
     <div>1</div>
     <div>2</div>
@@ -70,7 +81,8 @@ tags: Css
 
 #### flex justify-content示例
 ![图片](http://oqt0cgoq9.bkt.clouddn.com/css-flex-4.jpg)
-```
+```css
+/*css内容*/
 .flex-justify-content {
     display: flex;
     width: 100px;
@@ -82,6 +94,9 @@ tags: Css
     width: 30px;
     border:1px solid #333;
 }
+```
+```html
+<!-- html 内容 -->
 <div class="flex-justify-content">
     <div>1</div>
     <div>2</div>
@@ -100,7 +115,8 @@ tags: Css
 #### flex align-items示例
 ![图片](http://oqt0cgoq9.bkt.clouddn.com/css-flex-7.jpg)
 
-```
+```css
+/*css内容*/
 .flex-align-items {
     display: flex;
     width: 100px;
@@ -116,6 +132,9 @@ tags: Css
 .flex-align-items div:nth-child(2) {
    height:50px;
 }
+```
+```html
+<!-- html 内容 -->
 <div class="flex-justify-content">
     <div>1</div>
     <div>2</div>
@@ -134,7 +153,8 @@ tags: Css
 #### flex-wrap示例
 ![图片](http://oqt0cgoq9.bkt.clouddn.com/css-flex-8.jpg)
 
-```
+```css
+/*css内容*/
 .flex-wrap {
     display: flex;
     flex-wrap: wrap;
@@ -161,6 +181,9 @@ tags: Css
     width: 60px;
     border:1px solid #333;
 }
+```
+```html
+<!-- html 内容 -->
 <div class="flex-wrap">
     <div>1</div>
     <div>2</div>
@@ -175,7 +198,8 @@ tags: Css
 
 #### flex align-content示例
 ![图片](http://oqt0cgoq9.bkt.clouddn.com/css-flex-9.jpg)
-```
+```css
+/*css内容*/
 .flex-align-content {
     display: flex;
     flex-wrap: wrap;
@@ -196,6 +220,9 @@ tags: Css
     width: 50px;
     border:1px solid #333;
 }
+```
+```html
+<!-- html 内容 -->
 <div class="flex-align-content">
     <div>1</div>
     <div>2</div>
@@ -205,7 +232,8 @@ tags: Css
 
 #### flex margin-right设值
 ![图片](http://oqt0cgoq9.bkt.clouddn.com/css-flex-10.jpg)
-```
+```css
+/*css内容*/
 .flex-margin-auto {
     display: flex;
     width: 100px;
@@ -219,7 +247,9 @@ tags: Css
 .flex-margin-auto div:nth-child(1){
     margin-right:auto;
 }
-
+```
+```html
+<!-- html 内容 -->
 <div class="flex-margin-auto">
     <div>1</div>
     <div>2</div>

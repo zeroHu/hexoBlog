@@ -14,7 +14,7 @@ tags: javascript
 > js 的类型 ： string number boolean object undefined null
 
 这几个分别对应用typeof来判断的时候得结果是：
-```
+```javascript
     typeof 'zero' //"string"
     typeof 21 //"number"
     typeof true //"boolean"
@@ -36,7 +36,7 @@ tags: javascript
 总结就是 调用Object.prototype.toString 返回的是”[object“ 和 class 和 ”]“组成的字符串，而class 是我们要判断的对象的内部属性
 
 还是按照上面的js 类型用 Object.prototype.toString来判断
-```
+```javascript
     Object.prototype.toString.call('zero');//"[object String]"
     Object.prototype.toString.call(21);//"[object Number]"
     Object.prototype.toString.call(true);//"[object Boolean]"
@@ -54,7 +54,7 @@ tags: javascript
 
 既然这货能够判断这么仔细，应该封装一个函数 ，便于调用判断类型啊。
 
-```
+```javascript
 // 第二版
 var class2type = {};
 

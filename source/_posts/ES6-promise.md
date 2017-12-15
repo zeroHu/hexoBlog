@@ -3,12 +3,36 @@ title: ES6-promise
 date: 2017-07-10 19:14:47
 tags: ES6
 ---
-### promise
+### promise 理念
+
+> 一个promise 代表异步操作最终完成或者失败的对象，一个promise可以使用它的constructor创建。但是大多数使用的是其他函数创建并返回的promise。**本质上来说就是一个promise是某个函数的返回对象，你可以把回调函数绑定在这个对象上，而不是把回调函数当做参数传入函数。**
+
+```javascript
+    //老式函数
+
+    function successCallback(result){
+        console.log('it successed with'+result);
+    }
+    function failureCallback(error){
+        console.log('it failed with'+error);
+    }
+    doSomething(successCallback,failureCallback);
+
+    //新式函数
+
+    let promise = doSomething();
+    promise.then(successCallback,failureCallback);
+    //或者
+    doSomething().then(successCallback,failureCallback)
+```
+
+
+### promise 实战
 
 > 处理后一个ajax 依赖前一个ajax的结果的请求
 
-```
-<!-- 先定义一个返回Promise对象的Ajax过程 -->
+```javascript
+//先定义一个返回Promise对象的Ajax过程
 var ajax = function(option){
     return new Promise(function(resolve, reject){
         $.ajax({
@@ -24,7 +48,8 @@ var ajax = function(option){
         });
     });
 };
-<!--  启动第一个异步任务 -->
+
+//启动第一个异步任务
 var p1 = ajax({
     url: 'url1',
     method:'post',
@@ -32,7 +57,7 @@ var p1 = ajax({
     	code:'xxx'
     }
 });
-<!-- 处理第一个异步回调的结果 -->
+//处理第一个异步回调的结果
 p1.then(function(resp1Data){
     console.log(resp1Data);
     <!--  启动第二个异步任务 -->
@@ -40,7 +65,7 @@ p1.then(function(resp1Data){
         url: 'url2'
     });
 })
-<!--处理第2个异步任务的结果 -->
+//处理第2个异步任务的结果
 .then(function(resp2Data){
     console.log(resp2Data);
 });
@@ -48,9 +73,10 @@ p1.then(function(resp1Data){
 ```
 > 处理多个ajax之间的请求相互不影响，但是最后执行语句的情况是要求所有ajax都已经执行完毕，返回结果的情况
 
-```
-jquery 的 $.when就是利用promise实现
-<!-- jquery 封装的when -->
+```javascript
+/*jquery 的 $.when就是利用promise实现*/
+
+//jquery 封装的when
 function getDataFun(){
     var fun1 = $.ajax({url: "/equip_rank",type:'GET',dataType:'jsonp'}),
         fun2 = $.ajax({url: "/score_rank",type:'GET',dataType:'jsonp'}),
@@ -66,7 +92,8 @@ function getDataFun(){
     })
 }
 
-<!-- promise -->
+//promise
+
 var ajax = function(options){
 	return new Promise(function(resolve,reject){
 		$.ajax({
@@ -93,13 +120,9 @@ Promise.all([p1,p2,p3]).then(function(results){
     console.log(err);
 });
 
+//实例
 
-
-
-<!-- 实例 -->
-
-
-testPromise(){
+function testPromise(){
     var ajax = function(option){
         return new Promise(function(resolve,reject){
             $.ajax({

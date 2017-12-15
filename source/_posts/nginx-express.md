@@ -4,7 +4,7 @@ date: 2017-09-28 17:11:10
 tags: nginx
 ---
 #### nginx 如何能够代理到express这样的localhost:3000这样的页面
-```
+```nginx
 upstream express-ip {
     # Nodejs app upstream
     server 127.0.0.1:3000;

@@ -4,7 +4,7 @@ date: 2017-10-19 15:19:06
 tags: javascript 比较复杂的部分
 ---
 #### 原型链
-```
+```javascript
 function Foo(){
     this.value = 42;
 }
@@ -29,7 +29,7 @@ test
                         {toString: ... /* etc. */};
 ```
 #### 构造函数
-```
+```javascript
 function Person(name,year){
     this.name = name;
     this.year = year;
@@ -43,8 +43,8 @@ var person2 = new Person('john','20');
 #### 闭包
 > 闭包指的是有权访问另一个函数作用域中的变量，创建闭包的常见方式，就是在一个函数内部创建另一个函数
 
-```
-典型的闭包示例
+```javascript
+//典型的闭包示例
 function createComparisonFunction(protypeName){
     return function(object1,object2){
         var value1 = object1[protypeName];
@@ -58,8 +58,8 @@ function createComparisonFunction(protypeName){
         }
     }
 }
-常见的一个问题
-闭包只能取得包含函数中任何变量的最 后一个值
+//常见的一个问题
+//闭包只能取得包含函数中任何变量的最 后一个值
 function jisu(){
     var result = [];
     for(var i =0;i<10;i++){
@@ -68,7 +68,7 @@ function jisu(){
         }
     }
 }
-改成能够实现的函数
+//改成能够实现的函数
 function jisu(){
     var result = [];
     for(var i =0;i<10;i++){
@@ -83,7 +83,7 @@ function jisu(){
 #### 面向对象程序设计
 
 理解对象
-```
+```javascript
 var person = new Object();
 person.name = 'zero';
 person.age = '20';
@@ -92,7 +92,7 @@ person.sayName = function(){
     alert(this.name);
 }
 
-=======等价于======
+//=======等价于======
 
 var person = {
     name: 'zero',
@@ -110,7 +110,7 @@ var person = {
 
 > 感觉这是我在日常写重复函数中最长用到的一个啊，比如处理校验，或者处理重复数组之类的，这样的可能会多次遇到的函数 我都会提出到一个util函数里面，需要就直接传入参数，直接调用
 
-```
+```javascript
     function createPerson(name){
         var o = new Object();
         o.name = name;
@@ -125,7 +125,7 @@ var person = {
 > 缺点：对象无法识别，因为所有的实例都指向一个原型
 
 ##### 2.构造函数模式
-```
+```javascript
     function Person(name){
         this.name = name;
         this.getName = function(){
@@ -138,7 +138,7 @@ var person = {
   优点：实例可以识别为一个特定的类型
 
 ##### 3.原型模式
-```
+```javascript
     function Person(name){
 
     }
@@ -153,7 +153,7 @@ var person = {
 
 原型模式优化
 
-```
+```javascript
   function Person(name){
   }
   Person.prototype = {
@@ -169,7 +169,7 @@ var person = {
   缺点： 重写了原型，丢失了constructor属性
 
 ##### 4.组合模式
-```
+```javascript
 function Person(name){
     this.name = name;
 }

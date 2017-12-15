@@ -6,13 +6,13 @@ tags: nginx
 #### vue 之nginx配置
 > vue的项目如果是配置在域名根目录下(http://xxx.xx.com)，那就是非常简单 没啥好说的直接上nginx代码
 
-```bash
+```nginx
     server {
         listen 80;
         server_name http://xxx.xx.com;
         location / {
-                root /xxx/xxxx/vue/dist/;//项目的目录
-                try_files $uri $uri/ /index.html =404;//histroy模式需要
+                root /xxx/xxxx/vue/dist/;#项目的目录
+                try_files $uri $uri/ /index.html =404;#histroy模式需要
         }
     }
 ```
@@ -32,7 +32,7 @@ tags: nginx
         2): vuerouter mode : histroy
         3): vuerouter base : 指定为/vue 也就是域名后面的根目录名称
 nginx配置
-```bash
+```nginx
     location /vue {
         alias /Users/hujianxia/zeroDemo/vue-demo-longtime/dist/;
         try_files $uri $uri/ /index.html =404;
@@ -47,18 +47,18 @@ nginx配置
     而alias 只能使用在location中 并且alias 指定的路径一定要以/结尾 不然会找不到资源,而 root 则对 ”/” 可有可无。
 
 比如
-```
-    root
+```nginx
+    #root
         location /i/ {
             root /home/data;
         }
-        请求 http://foofish.net/i/top.gif 这个地址时，那么在服务器里面对应的真正的资源是 /home/data/i/top.gif文件，注意真实的路径是root指定的值加上location指定的值。
+        #请求 http://foofish.net/i/top.gif 这个地址时，那么在服务器里面对应的真正的资源是 /home/data/i/top.gif文件，注意真实的路径是root指定的值加上location指定的值。
 
-    alias
+    #alias
         location /i/ {
             alias /home/data/;
         }
-        请求 http://foofish.net/i/top.gif 这个地址时，那么在服务器里面对应的真正的资源是 /home/data/top.gif文件
+        #请求 http://foofish.net/i/top.gif 这个地址时，那么在服务器里面对应的真正的资源是 /home/data/top.gif文件
 
 ```
 > tips:nginx root和alias 参考文章:https://foofish.net/nginx-root-different-with-alias.htmls

@@ -4,7 +4,7 @@ date: 2017-09-13 10:49:13
 tags: gulp
 ---
 ### gulp 配置
-```
+```javascript
 var gulp = require('gulp');
 var uglify = require('gulp-uglify'); //压缩代码
 var concat = require('gulp-concat'); //合并为一个代码

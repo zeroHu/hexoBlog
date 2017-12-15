@@ -16,7 +16,7 @@ tags: React
 > * npm v5.2.0
 
 #### 然后按照文档里面的步骤
-```
+```bash
  	npm install react-native -g
  	npm install react-native cli -g
 ```

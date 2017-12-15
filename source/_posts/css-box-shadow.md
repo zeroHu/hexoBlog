@@ -8,7 +8,7 @@ tags: Css
 
 #### 投影原理解释
 ![图片](http://oqt0cgoq9.bkt.clouddn.com/box-shadow.jpeg)
-```
+```css
 .box-shadow {
   box-shadow: 2px 3px 4px rgba(0,0,0,.5);
 }
@@ -22,8 +22,8 @@ tags: Css
 ![图片](http://oqt0cgoq9.bkt.clouddn.com/box-shadow-bottom.jpeg)
 > 原理解析：最终的解决方案来自 box-shadow 鲜为人知的第四个长度参数。它排在 模糊半径参数之后，称作扩张半径。这个参数会根据你指定的值去扩大或 (当指定负值时)缩小投影的尺寸。举例来说，一个 -5px 的扩张半径会把投影的宽度和高度各减少 10px(即每边各 5px)。
 
-```
-要素是 阴影值（4px) 和 扩张半径值(-4px) 是相反数
+```css
+/*要素是 阴影值（4px) 和 扩张半径值(-4px) 是相反数*/
 box-shadow: 0 5px 4px -4px black;
 ```
 #### 邻边阴影

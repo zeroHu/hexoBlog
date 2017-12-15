@@ -1,13 +1,13 @@
 ---
-title: download-img
+title: download-img (下载canvas画出的base64格式图片)
 date: 2017-11-29 11:47:48
 tags: javascript
 ---
 #### 主要讲解用js下载文件或者图片
 > 起因：因工作需要，用canvas画出了一张图片，图片格式是（base64)
 
-```
-base64图片转为blob文件
+```javascript
+//base64图片转为blob文件
 
 function dataURLtoBlob(dataurl) {
     var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],

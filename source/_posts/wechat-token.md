@@ -14,7 +14,7 @@ tags: wechat
 
 
 nodejs 代码
-```
+```javascript
 // checkSignature.js
 /**
  * 整个验证步骤分为三步
@@ -86,7 +86,7 @@ server.listen(port, () => {
 });
 ```
 nginx 配置
-```
+```nginx
 upstream nodejs {
     server 127.0.0.1:3333;
     keepalive 64;

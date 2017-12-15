@@ -11,7 +11,7 @@ tags: XMLHttpRequest
 
 > 普通fetch get img 请求
 
-```
+```javascript
 let myImage = document.querySelector('img');
 
 fetch('flowers.jpg')
@@ -25,7 +25,7 @@ fetch('flowers.jpg')
 ```
 > 普通参数get请求
 
-```
+```javascript
 fetch('/api/website/banners/').then(function(response) {
     response.json().then(function(data) {
         console.log(data);
@@ -36,7 +36,7 @@ fetch('/api/website/banners/').then(function(response) {
 ```
 > fetch 也可以接受第二个参数
 
-```
+```javascript
 var myHeaders = new Headers();
 
 var myInit = { method: 'GET',
@@ -55,7 +55,7 @@ fetch('flowers.jpg',myInit)
 ```
 > fetch post请求
 
-```
+```javascript
 var form = new FormData(document.getElementById('login-form'));
 fetch("/login", {
   method: "POST",

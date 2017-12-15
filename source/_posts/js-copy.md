@@ -6,13 +6,13 @@ tags: javascript
 ### js 复制功能
 > 原文地址 http://web.jobbole.com/86054/
 > 核心代码是document.execCommand('copy')复制代码
-```
-html
+
+```html
 <input type="text" id="twitter" value="hello zero i am" />
 <button data-copytarget="#twitter">copy</button>
-如果是要复制div内的内容则方法是写一个input框放在页面外 position:absolute left:-3000000px;定义在页面的外部（不可以用hidden 或者display:none）
-
-js
+<!-- 如果是要复制div内的内容则方法是写一个input框放在页面外 position:absolute left:-3000000px;定义在页面的外部（不可以用hidden 或者display:none） -->
+```
+```javascript
 (function() {
   'use strict';
   // click events
