@@ -4,7 +4,7 @@ date: 2017-07-10 19:14:47
 tags: ES6
 ---
 ### promise 理念
-
+#### promise
 > 一个promise 代表异步操作最终完成或者失败的对象，一个promise可以使用它的constructor创建。但是大多数使用的是其他函数创建并返回的promise。**本质上来说就是一个promise是某个函数的返回对象，你可以把回调函数绑定在这个对象上，而不是把回调函数当做参数传入函数。**
 
 ```javascript
@@ -22,13 +22,40 @@ tags: ES6
 
     let promise = doSomething();
     promise.then(successCallback,failureCallback);
-    //或者
+    //或者 : 异步函数调用
     doSomething().then(successCallback,failureCallback)
 ```
+promise 保证点
+* 在javascript事件队列的当前运行完成之前，回调函数永远不会被调用
+* 通过.then形式添加的回调函数，甚至都在异步操作完成之后才被添加的函数，都会被调用，如上所示
+* 通过多次调用.then,可以添加多个回调函数，它们会按照插入顺序并且独立运行
 
+#### 链式调用
+> 一个常见的需求是连续两个或多个异步操作，这样的情况下，每一个后来的操作都在前一个执行成功的前提之后，带着上一步返回的结果开始执行。我们可以创造一个promise chain来完成这个需求。
 
+```javascript
+//老式代码
+doSomething(function(result){
+    doSomething(function(newresult){
+        doSomething(function(finalresult){
+            console.log('Got the final result: ' + finalresult);
+        },failureCallback)
+    },failureCallback)
+},failureCallback)
+//现代函数
+doSomething()
+    .then(function(result){
+        return doSomethingElse(result);
+    })
+    .then(function(newresult){
+        return doThirdTing(newresult);
+    })
+    .then(function(finalresult){
+        console.log('Got the final result: ' + finalresult);
+    })
+    .catch(failureCallback)
+```
 ### promise 实战
-
 > 处理后一个ajax 依赖前一个ajax的结果的请求
 
 ```javascript
@@ -182,6 +209,26 @@ function testPromise(){
       console.log(345);
       console.log('resp3', JSON.stringify(resp3))
     });
+
+
+    //测试Promise.all返回的时间的
+    console.time('startpromise');
+    var s1 = new Promise((resolve,reject) => {
+        setTimeout(() => {resolve("s1")},1000)
+    });
+    var s2 = new Promise((resolve,reject) => {
+        setTimeout(() => {resolve("s2")},2000)
+    });
+    var s3 = new Promise((resolve,reject) => {
+        setTimeout(() => {resolve("s3")},3000)
+    });
+    Promise.all([s1,s2,s3])
+        .then(function(results){
+            console.log(results);
+            console.timeEnd('startpromise');
+        })
 }
 ```
 ![图片](http://oqt0cgoq9.bkt.clouddn.com/example-promise.jpeg)
+
+> 好文地址：https://developers.google.com/web/fundamentals/primers/promises#promise-terminology
