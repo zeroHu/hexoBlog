@@ -1,6 +1,6 @@
 ---
-title: ES6-08
-date: 2017-07-06 21:51:39
+title: es6-generator
+date: 2017-12-18 10:54:15
 tags: ES6
 ---
 ### Generator函数
