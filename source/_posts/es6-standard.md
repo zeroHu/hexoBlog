@@ -1,14 +1,15 @@
 ---
-title: es6-standard
+title: es6-standard(es6 标准)
 date: 2017-06-30 15:36:47
 tags: ES6
 ---
 前言：
-> 指导了一些es6的用法，但是一直没有系统的看关于es6的所有改变，于是这次看<a href="http://www.ruanyifeng.com/blog/2017/09/es6_primer_3rd_edition.html">**阮一峰老师的ES6标准入门**</a>，记录下来方便自己查询。
+> 了解了一些es6的用法，但是一直没有系统的看关于es6的所有改变，于是这次看[**阮一峰老师的ES6标准入门**](http://www.ruanyifeng.com/blog/2017/09/es6_primer_3rd_edition.html)，记录下来方便自己查询。
 
 -----
 ### 第一章：介绍了babel 如何将es6 转为 所有浏览器都识别的es5
 > .babelrc
+
 ```javascript
 {
 	"presets":[
@@ -18,7 +19,8 @@ tags: ES6
 	"plugins":[]
 }
 ```
-package
+> package
+
 ```javascript
 {
     "name": "es6Demo",
@@ -61,7 +63,8 @@ a //ReferenceErr
 b //1
 ```
 #### const基本用法
-> 1.const是声明一个只读的常量，也是代码块内
+> const是声明一个只读的常量，也是代码块内
+
 ```javascript
 if(true){
     const MAX = 5;
@@ -72,7 +75,7 @@ MAX // Uncaught ReferenceError
 ### 第三章：数组的结构赋值
 #### 3.1 为变量赋值
 ```javascript
-es5 声明变量的方式
+//es5 声明变量的方式
 
 var a = 1;
 var b = 2;
@@ -81,14 +84,15 @@ var sendA = [],
     sendB = [],
     sendC = [];
 
-es6 声明变量的方式
+//es6 声明变量的方式
 
 let [a,b,c] = [1,2,3];
 let [sendA,sendB,sendC] = [[],[],[]];
 
 //more example
-let [head, ...tail] = [1, 2, 3, 4]; head // 1
-tail // [2, 3, 4]
+let [head, ...tail] = [1, 2, 3, 4];
+// head ==> 1
+// tail ==> [2, 3, 4]
 ```
 > 这种写法为模式匹配，只要等号两边相等就可以匹配,解构赋值不仅适用于var命令 , 解构不仅可以用于数组，还可以用于对象。，也适用于let和const命令。
 
@@ -99,13 +103,11 @@ let [x,y,z] = new Set(["a","b","c"])
 #### 3.2 对象的解构赋值
 
 ```javascript
-let {a,b} = {foo:"aa",bar:bb}
-
-
+let {a,b} = { foo:"aa",bar:bb }
 let { a = {}, b= {} } = {};
 ```
 
-#### 3.3字符的解构赋值
+#### 3.3 字符的解构赋值
 ```javascript
     const [a,b,c,d,e] = 'hello';
     //a  'h'
@@ -113,7 +115,7 @@ let { a = {}, b= {} } = {};
     //e  'o'
 ```
 
-#### 3.4函数的解构
+#### 3.4 函数的解构
 ```javascript
     function add([x+y]){
         return x+y
@@ -123,10 +125,9 @@ let { a = {}, b= {} } = {};
 -----
 ### 第四章：字符串的拓展
 #### includes(), startsWith(), endsWith()
-
-> * includes():返回布尔值，表示是否找到了参数字符串。
-> * startsWith():返回布尔值，表示参数字符串是否在源字符串的头部
-> * endsWith():返回布尔值，表示参数字符串是否在源字符串的尾部。
+* includes():返回布尔值，表示是否找到了参数字符串。
+* startsWith():返回布尔值，表示参数字符串是否在源字符串的头部
+* endsWith():返回布尔值，表示参数字符串是否在源字符串的尾部。
 
 ```javascript
 var s = 'Hello world!';
@@ -177,6 +178,7 @@ console.log(tmpl(data));
 ```
 #### 标签模板
 > 是用来防止用户输入恶意代码
+
 ```javascript
     alert`hello`
     //等价于
@@ -268,3 +270,4 @@ var pagejson = {
 ```javascript
     var json = {foo:"1",baz:"2"};
     Object.entries(json);//[['foo','1'],['baz','2']]
+```
