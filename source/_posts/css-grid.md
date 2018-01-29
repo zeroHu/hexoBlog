@@ -61,8 +61,60 @@ gird-template-columns: repeat(20, 1fr)
 所以综合用法就是
 gird-tempate-columns: 200px repeat(3, 1fr 3fr) 10px //repeat(3, 1fr 3fr)是1fr 后面跟一个3fr 这样重复3次
 
+http://www.zeroyh.cn/main/css/grid/#autorows
+
 #### 隐式和显式网格
-> 上面的这种
+> 上面的这种 我们使用grid-template-columns 定义了自己的列轨道，让网格按照所需排列。
+
+grid-auto-rows: 100px
+```css
+#wapper {
++   grid-template-columns: 200px repeat(1, 1fr 3fr) 50px;
++   grid-auto-rows: 100px;
+}
+```
+http://www.zeroyh.cn/main/css/grid/#automix
+#### 轨道大小和 minmax()
+> 想给网格设定一个最小尺寸，不会低于最小
+
+grid-auto-rows: minmax(100px, auto)
+#### 跨轨道放置网格项目
+> grid-column-start, grid-column-end, grid-row-start 和 grid-row-end 属性，把前两个元素放到了我们的三列网格中。从左至右，第一个元素从列线1开始，延伸至列线4，也就是我们这个例子中最右边的列线。并从行线1延伸到行线3，占据了两个行轨道。
+
+```css
+.rowcolumn {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 100px
+}
+.box1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+.box2 {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+```
+http://www.zeroyh.cn/main/css/grid/#rowcolumn
+
+#### 网格间距
+> 网格横向间距  或 网格纵向间距  可使用 grid-column-gap 和 grid-row-gap 属性来创建
+
+```css
+    .gap {
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 1em;
+    }
+```
+http://www.zeroyh.cn/main/css/grid/#gap
+
+#### 允许嵌套网格
+
 
 
 
