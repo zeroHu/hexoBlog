@@ -27,7 +27,7 @@ display: inline-grid;
     display: grid;
 }
 ```
-http://blog.zeroyh.cn/main/css/grid/#wrapper
+http://www.zeroyh.cn/main/css/grid/#wrapper
 
 #### 网格轨道
 > 我们通过grid-template-columns 和 grid-template-rows 属性来定义网格中的行和列，这些属性定义了网格的轨道，一个网格轨道就是网格中任意两条线之间的内容
@@ -38,7 +38,7 @@ http://blog.zeroyh.cn/main/css/grid/#wrapper
 +   grid-template-columns: 200px 200px 200px;
 }
 ```
-http://blog.zeroyh.cn/main/css/grid/#grid
+http://www.zeroyh.cn/main/css/grid/#grid
 
 #### fr单位
 > 轨道可以用任何单位进行定义，网格还引入了fr为我们创建灵活的轨道，fr单位表示：网格空间中可用空间的一等份。
@@ -52,7 +52,7 @@ http://blog.zeroyh.cn/main/css/grid/#grid
 +   gird-template-columns: 300px 1fr 1fr;
 }
 ```
-http://blog.zeroyh.cn/main/css/grid/#fr
+http://www.zeroyh.cn/main/css/grid/#fr
 
 #### 在轨道清单中使用repeat()
 简介的说就是 如果 gird-template-columns 分成20 份  如果我们需要些 20个 1fr 1fr 1fr...就显得比较弱鸡了
@@ -62,9 +62,7 @@ gird-template-columns: repeat(20, 1fr)
 gird-tempate-columns: 200px repeat(3, 1fr 3fr) 10px //repeat(3, 1fr 3fr)是1fr 后面跟一个3fr 这样重复3次
 
 #### 隐式和显式网格
-
-
-
+> 上面的这种
 
 
 
