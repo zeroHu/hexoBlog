@@ -329,6 +329,143 @@ module.exports = {
     ]
 }
 ```
+### Tree Shaking
+#### 添加一个通用模块
+> 在我们的项目中新增一个通用模块文件 `src/math.js` 此文件导出两个函数
+
+```javascript
+export function cube (x) {
+    return x * x * x
+}
+export function square (x) {
+    return x * x
+}
+```
+然后在src/index.js 中import cube from './math.js'
+
+**注意，看bundle.js 代码。你会注意到 square 没有被导出，但是，它仍然被包含在 bundle 中。**
+
+#### 精简输出
+> 我们已经通过了`import`和`export`方法，标志了那些未引用的代码，但是我们需要从bundle中删除它们，我们将添加一个工具删除未引用的代码的工具，`UglifyJSPlugin`
+npm install -D uplifyjs-webpack-plugin
+webpack.config.js
+```javascript
+    const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+    module.exports = {
+        entry: './src/index.js',
+        output : {
+            filename: '[name].[chunkhash].js',
+            path: path.resolve(__dirname, 'dist')
+        },
+        plugins:[
+            new UglifyJSPlugin()
+        ]
+    }
+```
+### 生产环境构建
+#### 配置
+> 生产环境是需要更小的bundle.js 和更快的source map.建议生产环境和开发环境分开写 。`webpack-merge`的工具来合并。
+
+npm install -D webpack-merge
+
+project 结构更换
+- webpack.config.js
++ webpack.common.js
++ webpack.dev.js
++ webpack.prod.js
+
+**webpack.common.js**
+```javascript
+const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+module.exports = {
+    entry: {
+        app: './src/index.js'
+    },
+    output: {
+        filename: '[name].[chunkhash].js',
+        path: path.resolve(__dirname, 'dist')
+    },
+    plugins: [
+        new CleanWebpackPlugin('dist'),
+        new HtmlWebpackPlugin({
+            title: 'production name'
+        })
+    ]
+}
+```
+
+**webpack.dev.js**
+```javascript
+    const merge = require('webpack-merge');
+    const common = require('./webpack.common.js');
+
+    module.exports = merge(common, {
+        devtool: 'inline-source-map',
+        devServer: {
+            contentBase: './dist',
+            port: '9000',
+            hot: true
+        }
+    })
+```
+
+*避免在生产中使用 inline-*** 和 eval-***，因为它们可以增加 bundle 大小，并降低整体性能。*
+*鼓励在生产环境使用 devtool: source-map*
+**webpack.prod.js**
+```javascript
+    const merge = require('webpack-merge');
+    const common = require('./webpack.common.js');
+    const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+
+    module.exports = merge(common, {
+        plugins: [
+            new UglifyJSPlugin()
+        ]
+    })
+```
+
+#### NPM SCRIPTS
+package.json
+```javascript
+    scripts: {
+        "start": "webpack-dev-server --open --config webpack.dev.js",
+        "build": "webpack --config webpack.prod.js"
+    }
+```
+#### 指定环境
+process.env.NODE_ENV 环境变量
+webpack.prod.js add
+```javascript
+const webpack = require('webpack')
+module.exports = merge(common, {
+    plugins: [
+    +   new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('production')
+        })
+    ]
+})
+```
+这样后就可以在js中使用
+src/index.js add
+```javascript
++if (process.env.NODE_ENV !== 'production') {
++    console.log('this is development')
++}
+```
+#### split css
+
+### 代码分离
+#### 入口起点
+
+
+
+
+
+
+
 
 
 
