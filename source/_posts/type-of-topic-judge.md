@@ -18,7 +18,9 @@ tags: javascript
     typeof 'zero' //"string"
     typeof 21 //"number"
     typeof true //"boolean"
-    typeof {} //"object" typeof []//"object" typeof Function //"function"
+    typeof {} //"object"
+    typeof []//"object"
+    typeof Function //"function"
     typeof undefined //"undefined"
     typeof null //"object"
 ```
@@ -40,7 +42,9 @@ tags: javascript
     Object.prototype.toString.call('zero');//"[object String]"
     Object.prototype.toString.call(21);//"[object Number]"
     Object.prototype.toString.call(true);//"[object Boolean]"
-    Object.prototype.toString.call([]);//"[object Array]"  Object.prototype.toString.call({});//"[object Object]"   Object.prototype.toString.call(function a(){});//"[object Function]"
+    Object.prototype.toString.call([]);//"[object Array]"
+    Object.prototype.toString.call({});//"[object Object]"
+    Object.prototype.toString.call(function a(){});//"[object Function]"
     Object.prototype.toString.call(undefined);//"[object Undefined]"
     Object.prototype.toString.call(null);//"[object Null]"
 
