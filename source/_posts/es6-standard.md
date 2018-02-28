@@ -138,23 +138,19 @@ s.includes('o') // true
 
 #### repeat()
 ```javascript
-let newarr = 'x'.repeat(10);
-//'xxxxxxxxxx'
+let newarr = 'x'.repeat(10);//'xxxxxxxxxx'
 ```
 #### 模板字符串"``"
 
 ```javascript
     let str = 'history';
     console.log(`this vue mode is ${str}`);//this vue mode is history
-
-
-    const tmpl = addrs => ` <table>
-    ${addrs.map(addr => ` <tr><td>${addr.first}</td></tr> <tr><td>${addr.last}</td></tr>
-    `).join('')}
-    </table> `;
-
+    const tmpl = addrs =>
+        ` <table>
+            ${addrs.map(addr => ` <tr><td>${addr.first}</td></tr> <tr><td>${addr.last}</td></tr>`).join('')}
+        </table> `;
     const data = [
-    { first: '<Jane>', last: 'Bond' }, { first: 'Lars', last: '<Croft>' },
+        { first: '<Jane>', last: 'Bond' }, { first: 'Lars', last: '<Croft>' },
     ];
     console.log(tmpl(data));
 ```
@@ -162,19 +158,14 @@ let newarr = 'x'.repeat(10);
 ```javascript
 let str = 'history';
 console.log(`this vue mode is ${str}`);
-
-
-
 const tmpl = addrs => ` <table>
     ${addrs.map(addr => ` <tr><td>${addr.first}</td></tr> <tr><td>${addr.last}</td></tr>
     `).join('')}
     </table> `;
-
 const data = [
     { first: '<Jane>', last: 'Bond' }, { first: 'Lars', last: '<Croft>' },
 ];
 console.log(tmpl(data));
-
 ```
 #### 标签模板
 > 是用来防止用户输入恶意代码
@@ -183,7 +174,6 @@ console.log(tmpl(data));
     alert`hello`
     //等价于
     alert(hello)
-
     var a = 5; var b = 10;
     tag`Hello ${ a + b } world ${ a * b }`; // 等同于
     tag(['Hello ', ' world ', ''], 15, 50);
@@ -200,7 +190,7 @@ console.log(tmpl(data));
         'name':'zero'
     };
     let array = Array.from(arraylike);
-    console.log(array)
+    console.log(array); // []
 ```
 
 #### 拓展运算符(...)也可以将某些数据结构转为数组
@@ -215,6 +205,7 @@ function foo() {
 #### 数组实例的includes()
 
 ```javascript
+// includes 兼容性不太好
 [1,2,34].includes(1);//true
 ['a','b','cd'].includes('f');//false
 ```
@@ -258,16 +249,16 @@ var pagejson = {
 ### 第七章：Object
 #### Object.keys()
 ```javascript
-    var json = {foo:"1",baz:"2"};
+    var json = { foo:"1",baz:"2" };
     Object.keys(json);//['foo','baz']
 ```
 #### Object.values()
 ```javascript
-    var json = {foo:"1",baz:"2"};
+    var json = { foo:"1",baz:"2" };
     Object.values(json);//['1','2']
 ```
 #### Object.entries()
 ```javascript
-    var json = {foo:"1",baz:"2"};
+    var json = { foo:"1",baz:"2" };
     Object.entries(json);//[['foo','1'],['baz','2']]
 ```
