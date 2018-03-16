@@ -1,7 +1,7 @@
 ---
-title: lear-js-difficult
+title: 难点之原型链
 date: 2017-10-19 15:19:06
-tags: javascript 比较复杂的部分
+tags: js 困惑
 ---
 #### 原型链
 ```javascript

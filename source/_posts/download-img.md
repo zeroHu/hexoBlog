@@ -8,7 +8,6 @@ tags: javascript
 
 ```javascript
 //base64图片转为blob文件
-
 function dataURLtoBlob(dataurl) {
     var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
         bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
@@ -36,7 +35,7 @@ function BlobDownload(){
     }
     else{
         blob = _file;
-        console.log('xxxxxxxxxxxx->',window.URL.createObjectURL(blob));
+        console.log('------------>',window.URL.createObjectURL(blob));
         if(window.URL){
             document.getElementById("download-btn").innerHTML = '<a download="invitationCard.jpg" href="' + window.URL.createObjectURL(blob) + '" target="_blank">下载邀请函图片</a>';
         }

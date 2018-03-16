@@ -1,10 +1,9 @@
 ---
-title: type-of-topic-judge（类型判断）
+title: 类型判断 (typeof instanceof)
 date: 2017-12-12 14:32:55
 tags: javascript
 ---
 #### 类型判断
-
 > 原文地址:https://github.com/mqyqingfeng/Blog/issues/28
 
 在日常的工作中，只要有业务和逻辑需求必然会用到类型判断，判断是否是数字 数组 对象等然后做下一步是非常常见的事情，今日就让我们来一探如何来正确的判断类型，让你的代码运行起来不报错
@@ -54,34 +53,25 @@ tags: javascript
     var date = new Date();
     Object.prototype.toString.call(date) // [object Date]
 ```
-
-
 既然这货能够判断这么仔细，应该封装一个函数 ，便于调用判断类型啊。
 
 ```javascript
 // 第二版
 var class2type = {};
-
 // 生成class2type映射
 "Boolean Number String Function Array Date RegExp Object Error".split(" ").map(function(item, index) {
     class2type["[object " + item + "]"] = item.toLowerCase();
 });
-
 function type(obj){
     if(obj === null){
-        return obj+"";
+        return obj + "";
     }
     return typeof obj ==="object" || typeof obj === "function" ? class2type[Object.prototype.toString.call(obj)] || "object" : typeof obj;
 }
-
-
-
-可以利用type来封装函数罗
-
+// 可以利用type来封装函数罗
 var isFunction = function (obj){
     return type(obj) === 'function'
 }
-
 var isArray = function(obj){
     if(Array.isArray){
         return Array.isArray(obj)
@@ -89,5 +79,8 @@ var isArray = function(obj){
         return type(obj) === 'array'
     }
 }
-
+```
+##### instanceof
+```
+待完善。。。
 ```

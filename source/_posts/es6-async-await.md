@@ -3,14 +3,14 @@ title: es6-async-await
 date: 2017-12-20 16:41:01
 tags: ES6
 ---
-### async 
+### async
 > 通俗的来讲 gennerator 的语法糖
 
 #### 初步了解
 先回忆一下 gennerator
 
 ```javascript
-const fs = require('fs)
+const fs = require('fs');
 
 const readFile = function (fileName) {
     return new Promise(function (reslove, rejecrt) {
@@ -163,7 +163,7 @@ f().then(
         } catch (err) {
             console.log(err)
         }
-    } 
+    }
     //或者
     async function myFunction() {
         await somethingRunInPromise()
