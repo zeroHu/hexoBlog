@@ -9,7 +9,7 @@ tags: http
 
 其余特点:
  1) 也是建立在TCP协议之上的，服务器端比较容易实现。
- 2）与http协议有良好的兼容性，默认端口是80和443，并且握手段采用http协议，因此握手时不容易屏蔽，能通过各种http代理服务器。
+ 2) 与http协议有良好的兼容性，默认端口是80和443，并且握手段采用http协议，因此握手时不容易屏蔽，能通过各种http代理服务器。
  3）数据格式比较轻量，性能开销小，通信高效
  4）可以发送文本，也可以发送二进制数据
  5）没有同源限制，客户端可以与任意服务器通话
@@ -47,17 +47,16 @@ ws.send()  用于向服务器发送数据
 
 ```
 ##### websocket 服务器端代码实现
-> 给个代码实现链接吧： https://github.com/joewalnes/websocketd/tree/master/examples
-  http://www.ruanyifeng.com/blog/2017/05/websocket.html
+>给个代码实现链接吧： [示例代码](https://github.com/joewalnes/websocketd/tree/master/examples)    [阮老师文章链接](http://www.ruanyifeng.com/blog/2017/05/websocket.html)
 
 #### http2
-我理解就这下面这几句，具体可以参考阮老师的文章：http://www.ruanyifeng.com/blog/2016/08/http.html
+我理解就这下面这几句，具体可以参考 [阮老师的文章](http://www.ruanyifeng.com/blog/2016/08/http.html)
 > 1.头信息压缩
-  2.支持服务器推送 (同样阮老师写的：http://www.ruanyifeng.com/blog/2018/03/http2_server_push.html)
+  2.支持服务器推送 [阮老师写的](http://www.ruanyifeng.com/blog/2018/03/http2_server_push.html)
   3.对同时连接数量不限制
 
 #### https
-感觉太弱了，字都认识，在一起有点懵，阮老师链接： http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html
+感觉太弱了，字都认识，在一起有点懵，[阮老师链接](http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html)
 我的自我总结就下面一句话[尴尬]
 > 我的理解是在http协议上新增 SSL/TLS 协议，加密保证内容的安全
 

@@ -11,7 +11,7 @@ tags: js 困惑
     function comarr(arr) {
         var narr = [
             []
-        ]; //empty
+        ]; // empty
         for (var i = 0; i < arr.length; i++) {
             var barr = [];
             for (var m = 0; m < narr.length; m++) {

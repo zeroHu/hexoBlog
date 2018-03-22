@@ -1,9 +1,9 @@
 ---
-title: regular expressions
+title: regular expressions(正则表达式)
 date: 2018-03-14 11:02:20
 tags: regexp
 ---
-### 一些经常用但还是记不住的正则表达式
+### 一些经常用的正则表达式
 #### 时间校验正则表达式
 ```javascript
 var YYYYMMDDReg = /[\d]{4}[\/-]{1}[\d]{1,2}[\/-]{1}[\d]{1,2}/g;

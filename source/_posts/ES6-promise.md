@@ -247,6 +247,9 @@ function Promise (fn) {
     }
     fn(resolve)
 }
+```
+#### 一个添加链式版本的实现
+```javascript
 // 加入链式支持
 function Promise(fn) {
     // 需要成功时的回调
@@ -290,7 +293,9 @@ function Promise(fn) {
     }
     fn(resolve);
 }
-
+```
+#### 最后一版的实现
+```javascript
 // 最后一版实现promise
 function Promise(fn){
   var state = 'pending';

@@ -7,7 +7,7 @@ tags: XMLHttpRequest
 
 > 其中个人觉得在工作中用得多的是 from-data, x-www-form-urlencoded
 
-原文链接：https://imququ.com/post/four-ways-to-post-data-in-http.html
+[原文链接](https://imququ.com/post/four-ways-to-post-data-in-http.html)
 
 #### http
 > http请求分为3个部分：状态行，请求头，消息主题
