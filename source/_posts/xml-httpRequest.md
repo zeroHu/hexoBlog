@@ -132,7 +132,7 @@ function sendAjax() {
 #### ajax 设置 request header
 ##### 注意点:
 * 方法的第一个参数 header 大小写不敏感，即可以写成content-type，也可以写成Content-Type，甚至写成content-Type;
-* Content-Type的默认值与具体发送的数据类型有关，请参考本文【可以发送什么类型的数据】一节；
+* Content-Type的默认值与具体发送的数据类型有关，【可以发送什么类型的数据】[content-type详解](http://blog.zeroyh.cn/2018/02/08/ajax-http-body/)一节；
 * setRequestHeader必须在open()方法之后，send()方法之前调用，否则会抛错；
 * setRequestHeader可以调用多次，最终的值不会采用覆盖override的方式，而是采用追加append的方式。下面是一个示例代码：
 ```javascript
