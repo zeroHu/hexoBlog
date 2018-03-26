@@ -7,8 +7,6 @@ tags: XMLHttpRequest
 
 > 其中个人觉得在工作中用得多的是 from-data, x-www-form-urlencoded
 
-[原文链接](https://imququ.com/post/four-ways-to-post-data-in-http.html)
-
 #### http
 > http请求分为3个部分：状态行，请求头，消息主题
 
@@ -22,7 +20,7 @@ tags: XMLHttpRequest
 binary:相当于Content-Type:application/octet-stream,从字面意思得知，只可以上传二进制数据，通常用来上传文件，由于没有键值，所以，一次只能上传一个文件。
 raw:可以上传任意格式的文本，可以上传text、json、xml、html等
 
-#### application/x-wwww-form-urlencoded
+#### application/x-www-form-urlencoded
 > 这是最常见的post 提交数据的方式，浏览器的原生form 表单 在不设置 `enctype`的情况下就是使用 `application/x-wwww-form-urlencoded`方式提交数据.
 
 ```
@@ -77,3 +75,5 @@ Content-Type: text/xml
     </params>
 </methodCall>
 ```
+#### 地址
+> [原文链接](https://imququ.com/post/four-ways-to-post-data-in-http.html)
