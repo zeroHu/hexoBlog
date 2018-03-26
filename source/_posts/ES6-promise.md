@@ -375,10 +375,24 @@ var p2 = function (input){
     });
 }
 p()
-    .then(function(res){console.log('p的结果:' + res); return 'p then方法第一次返回'},function(value){console.log(value);return 'p then方法第一次错误的返回'})
-    .then(function(res){console.log('p第一次then方法的返回：'+res); return 'p then方法第二次返回'})
+    .then(
+        function(res){
+            console.log('p的结果:' + res);
+            return 'p then方法第一次返回'
+        },
+        function(value){
+            console.log(value);
+            return 'p then方法第一次错误的返回'
+        }
+    )
+    .then(function(res){
+        console.log('p第一次then方法的返回：'+res);
+        return 'p then方法第二次返回'
+    })
     .then(p2)
-    .then(function(res){console.log('p2的结果：' + res)});
+    .then(function(res){
+        console.log('p2的结果：' + res)
+    });
 
 ```
 

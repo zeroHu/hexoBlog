@@ -22,18 +22,18 @@ var test = new Bar()
 //原型链
 test
     Bar.prototype
-        {foo:"Hello World"}
+        { foo: "Hello World" }
             Foo.prototype
-                {method: ...};
+                { method: ... };
                     Object.prototype
-                        {toString: ... /* etc. */};
+                        { toString: ... /* etc. */ };
 ```
 #### 构造函数
 ```javascript
-function Person(name,year){
+function Person (name, year) {
     this.name = name;
     this.year = year;
-    this.sayName = function(){
+    this.sayName = function () {
         alert(this.name);
     }
 }
@@ -45,35 +45,35 @@ var person2 = new Person('john','20');
 
 ```javascript
 //典型的闭包示例
-function createComparisonFunction(protypeName){
-    return function(object1,object2){
+function createComparisonFunction (protypeName) {
+    return function (object1, object2) {
         var value1 = object1[protypeName];
         var value2 = object2[protypeName];
-        if(value1<value2){
+        if (value1 < value2) {
             return -1;
-        }else if(value1>value2){
+        } else if (value1 > value2) {
             return 1;
-        }else {
+        } else {
             return 0;
         }
     }
 }
 //常见的一个问题
 //闭包只能取得包含函数中任何变量的最 后一个值
-function jisu(){
+function jisu () {
     var result = [];
-    for(var i =0;i<10;i++){
-        result[i] = function(){
+    for (var i =0; i<10; i++) {
+        result[i] = function () {
             return i;
         }
     }
 }
 //改成能够实现的函数
-function jisu(){
+function jisu () {
     var result = [];
-    for(var i =0;i<10;i++){
-        result[i] = function(num){
-            return function(){
+    for (var i =0;i<10;i++) {
+        result[i] = function (num) {
+            return function () {
                 return num;
             }
         }(i)
@@ -88,7 +88,7 @@ var person = new Object();
 person.name = 'zero';
 person.age = '20';
 person.job = 'web developer';
-person.sayName = function(){
+person.sayName = function () {
     alert(this.name);
 }
 
@@ -98,7 +98,7 @@ var person = {
     name: 'zero',
     age: '20',
     job: 'web developer',
-    sayName: function(){
+    sayName: function () {
         alert(this.name)
     }
 }
@@ -111,10 +111,10 @@ var person = {
 > 感觉这是我在日常写重复函数中最长用到的一个啊，比如处理校验，或者处理重复数组之类的，这样的可能会多次遇到的函数 我都会提出到一个util函数里面，需要就直接传入参数，直接调用
 
 ```javascript
-    function createPerson(name){
+    function createPerson (name) {
         var o = new Object();
         o.name = name;
-        o.getName = function(){
+        o.getName = function () {
             console.log(this.name)
         }
         return o;
@@ -126,9 +126,9 @@ var person = {
 
 ##### 2.构造函数模式
 ```javascript
-    function Person(name){
+    function Person (name) {
         this.name = name;
-        this.getName = function(){
+        this.getName = function () {
             console.log(this.name);
         }
     }
@@ -139,11 +139,11 @@ var person = {
 
 ##### 3.原型模式
 ```javascript
-    function Person(name){
+    function Person (name) {
 
     }
     Person.prototype.name = 'zero';
-    Person.prototype.getName = function(){
+    Person.prototype.getName = function () {
         console.log(this.name)
     }
     var person1 = new Person();
@@ -154,11 +154,11 @@ var person = {
 原型模式优化
 
 ```javascript
-  function Person(name){
+  function Person (name) {
   }
   Person.prototype = {
     name : 'zero',
-    getName : function(){
+    getName : function () {
         console.log(this.name);
     }
   }
@@ -170,12 +170,12 @@ var person = {
 
 ##### 4.组合模式
 ```javascript
-function Person(name){
+function Person (name) {
     this.name = name;
 }
 Person.prototype = {
-    constructor:Person,
-    getName:function(){
+    constructor: Person,
+    getName: function () {
         console.log(this.name);
     }
     var person1 = new Person();

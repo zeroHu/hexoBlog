@@ -1,14 +1,15 @@
 ---
-title: 类型判断 (typeof instanceof)
+title: 类型判断 (typeof,instanceof)
 date: 2017-12-12 14:32:55
 tags: javascript
 ---
-#### 类型判断
+
+### 类型判断
 > 原文地址:https://github.com/mqyqingfeng/Blog/issues/28
 
 在日常的工作中，只要有业务和逻辑需求必然会用到类型判断，判断是否是数字 数组 对象等然后做下一步是非常常见的事情，今日就让我们来一探如何来正确的判断类型，让你的代码运行起来不报错
 
-##### typeof
+#### typeof
 相信这货大家都用到过，我之前也用到过，但是貌似总有一点心虚，不知道这样判断是否能保证所有的情况下都能正常运行。
 > js 的类型 ： string number boolean object undefined null
 
@@ -25,7 +26,7 @@ tags: javascript
 ```
 问题就非常容易总结出来就是，typeof 能判断string number undefined但是不能判断object null  和 object种类里面的细节
 
-##### Object.prototype.toString
+#### Object.prototype.toString
 如何来理解这个函数呢
 
 > 1.If the this value is undefined, return "[object Undefined]".
@@ -47,16 +48,13 @@ tags: javascript
     Object.prototype.toString.call(undefined);//"[object Undefined]"
     Object.prototype.toString.call(null);//"[object Null]"
 
-
-
-    object 类的拓展
+    // object 类的拓展
     var date = new Date();
     Object.prototype.toString.call(date) // [object Date]
 ```
 既然这货能够判断这么仔细，应该封装一个函数 ，便于调用判断类型啊。
 
 ```javascript
-// 第二版
 var class2type = {};
 // 生成class2type映射
 "Boolean Number String Function Array Date RegExp Object Error".split(" ").map(function(item, index) {
@@ -73,6 +71,7 @@ var isFunction = function (obj){
     return type(obj) === 'function'
 }
 var isArray = function(obj){
+    // 如果有isArray 更方便
     if(Array.isArray){
         return Array.isArray(obj)
     }else{
@@ -80,7 +79,27 @@ var isArray = function(obj){
     }
 }
 ```
-##### instanceof
+#### instanceof 运算符
+instanceof 示例
+```javascript
+let oStringObject = new String('hello world');
+console.log(oStringObject instanceof String) // true
 ```
-待完善。。。
+instanceof 常规用法
+> 通常来讲，使用 instanceof 就是判断一个实例是否属于某种类型
+
+```javascript
+function Foo(){}
+var foo = new Foo()
+console.log(foo instanceof Foo) // true
 ```
+
+
+
+
+
+
+
+
+
+
