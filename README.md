@@ -1,8 +1,12 @@
 ### zero blog
-#### 备注:
-    博客使使用的模板是hexo
+#### 博客内容
+> 这是我个人的平时的积累和记录，主要是 js, nodejs, css, nginx等模块，请查看我的博客
 
-#### 博客地址:  [zero的博客](http://blog.zeroyh.cn/)
+#### 使用模板引擎
+> 博客使使用的模板是hexo
 
-#### 目前有的内容（截止到2017年9月18日)
-![博客标签图](http://oqt0cgoq9.bkt.clouddn.com/blog-tags.jpg)
+#### 博客地址:
+> [zero的博客](http://blog.zeroyh.cn/)
+
+
+
