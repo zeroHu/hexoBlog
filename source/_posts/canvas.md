@@ -16,7 +16,7 @@ canvas.font = `${that.date.fontsize}px serif`;
 
 ```javascript
 canvas.textAlign = "center";
-//that.canvas.width 指的是定义的canvas宽度大小 可以获取 可以直接设值
+// that.canvas.width 指的是定义的canvas宽度大小 可以获取 可以直接设值
 canvas.fillText(name, this.canvas.width/2, that.name.top);
 ```
 > 图片base64地址获取
