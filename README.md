@@ -6,7 +6,7 @@
 > 博客使使用的模板是hexo
 
 #### 博客地址:
-> [zero的博客](http://blog.zeroyh.cn/)
+> [zero的博客](https://blog.zeroyh.cn/tags/index.html)
 
 
 
