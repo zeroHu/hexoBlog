@@ -49,6 +49,25 @@ ws.send()  用于向服务器发送数据
 ##### websocket 服务器端代码实现
 >给个代码实现链接吧： [示例代码](https://github.com/joewalnes/websocketd/tree/master/examples)    [阮老师文章链接](http://www.ruanyifeng.com/blog/2017/05/websocket.html)
 
+#### http 协议
+> [好文推荐](https://github.com/CyC2018/Interview-Notebook/blob/master/notes/HTTP.md)
+
+##### HTTP是如何建立连接的
+
+![http协议](https://sfault-image.b0.upaiyun.com/335/472/3354729685-59f18143c8c3f_articlex)
+
+##### 发送一条HTTP请求会发生什么
+```
+获取主机名，例如：http://www.example.com
+通过DNS获取服务器IP
+获取端口，默认是80端口
+连接到 112.23.59.223:80服务器 （这里其实是TCP连接）
+通过TCP信道发送一个HTTP请求
+服务器读取一个HTTP请求
+服务器查找所需资源并通过TCP信道返回资源
+关闭TCP连接
+```
+
 #### http2
 我理解就这下面这几句，具体可以参考 [阮老师的文章](http://www.ruanyifeng.com/blog/2016/08/http.html)
 > 1.头信息压缩
