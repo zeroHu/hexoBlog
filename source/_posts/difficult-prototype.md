@@ -1,24 +1,56 @@
 ---
-title: 难点之原型链
+title: 对象，原型，原型链
 date: 2017-10-19 15:19:06
 tags: js 困惑
 ---
+### 对象，原型，原型链
+> 分析对象，原型，原型链之间的关系
+
+#### 对象
+> 对象来源于两种形式，声明（字面）形式，构造形式
+
+```javascript
+// 字面语法
+var myobj = {
+    key: value,
+    ...
+}
+// 构造形式
+var myobj = new Object();
+myobj.key = value;
+```
+构造形式和字面形式是完全同种类的对象，唯一真正的区别是<font color="red">字面可以一次性声明很多key，value，但是构造形式的只能一个个添加</font>
+##### 对象的内容存储的位置
+> 对象的内容存储在特定的命名位置上，我们成这些为属性，注意<font color="red">实际上对象容器内只存储了属性的名称，它们像指针一样指向值存储的地方</font>
+
+##### 在对象中 属性名<font color="red">总是字符串</font>
+
+##### ES6中加入了计算属性，在字面对象`键`名称位置，可以指定表达式 用`[]`括起来
+```javascript
+var prefix = 'foo'
+var myobj = {
+    [prefix + "bar"]: "hello"
+}
+myobj['foobar']; // 'hello'
+```
+
+#### 原型
+
 #### 原型链
 ```javascript
 function Foo(){
     this.value = 42;
 }
 Foo.prototype = {
-    method:function(){}
+    method: function() {}
 }
 
-function Bar(){}
-Bar.prototype = new Foo()
-Bar.prototype.foo = 'Hello World';
+function Bar() {}
+Bar.prototype = new Foo();
 Bar.prototype.constructor = Bar;
+Bar.prototype.foo = 'Hello World';
 
-var test = new Bar()
-
+var test = new Bar();
 //原型链
 test
     Bar.prototype
@@ -27,6 +59,19 @@ test
                 { method: ... };
                     Object.prototype
                         { toString: ... /* etc. */ };
+```
+#### new Dog() 发生了啥
+```javascript
+function Dog (name) {
+    this.name = name
+}
+var dog1 = new Dog('dagou');
+// 当 new Dog() 的时候进行的哪些操作
+// 1.创建一个新对象
+// 2.新对象执行prototype连接 (实例一旦创建，将自动引用prototype对象的属性和方法)
+// 3.将对象绑定到函数调用this
+// 4.除非函数返回一个它自己的其他对象，这个被new调用的函数自动返回这个新构建的对象
+// 执行new Dog()实际上市返回了一个新对象并赋值给dog1
 ```
 #### 构造函数
 ```javascript
@@ -37,8 +82,8 @@ function Person (name, year) {
         alert(this.name);
     }
 }
-var person1 = new Person('zero','20');
-var person2 = new Person('john','20');
+var person1 = new Person('zero', '20');
+var person2 = new Person('john', '21');
 ```
 #### 闭包
 > 闭包指的是有权访问另一个函数作用域中的变量，创建闭包的常见方式，就是在一个函数内部创建另一个函数
@@ -82,7 +127,7 @@ function jisu () {
 ```
 #### 面向对象程序设计
 
-理解对象
+**理解对象**
 ```javascript
 var person = new Object();
 person.name = 'zero';
@@ -151,8 +196,7 @@ var person = {
 > 优点：方法不会被重建
   缺点 所有的属性和方法都共享，不能初始化参数
 
-原型模式优化
-
+**原型模式优化**
 ```javascript
   function Person (name) {
   }
