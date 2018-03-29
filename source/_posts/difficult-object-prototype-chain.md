@@ -33,15 +33,24 @@ var myobj = {
 }
 myobj['foobar']; // 'hello'
 ```
-
 #### 原型
+> 每一个javascript对象（null）除外，在创建的时候就会与之关联另外一个对象，这个对象就是我们所说的原型。每一个对象都会从原型”继承“属性
+
+##### 实例与原型关系
+> 当读取属性的时候，如果找不到，就会查找与之关联的原型中的属性，如果还查不到就会再找原型的原型。直到找到最顶层
+
+[prototype 和 __proto__ 详情请戳](/2018/03/29/difficult-prototype-proto/)
 
 #### 原型链
+> 原型组成的链状结构，就是原型链
+
+##### 例子讲解
 ```javascript
 function Foo(){
     this.value = 42;
 }
 Foo.prototype = {
+    constructor: Foo,
     method: function() {}
 }
 
@@ -60,20 +69,23 @@ test
                     Object.prototype
                         { toString: ... /* etc. */ };
 ```
-#### new Dog() 发生了啥
+
+#### 构造函数
+##### <font color="red">new Dog() 发生了啥</font>
+**当 new Dog() 的时候进行的哪些操作**
+* 1.创建一个新对象
+* 2.新对象执行prototype连接 (实例一旦创建，将自动引用prototype对象的属性和方法)
+* 3.将对象绑定到函数调用this
+* 4.除非函数返回一个它自己的其他对象，这个被new调用的函数自动返回这个新构建的对象执行new Dog()实际上市返回了一个新对象并赋值给dog1
+
 ```javascript
 function Dog (name) {
     this.name = name
 }
 var dog1 = new Dog('dagou');
-// 当 new Dog() 的时候进行的哪些操作
-// 1.创建一个新对象
-// 2.新对象执行prototype连接 (实例一旦创建，将自动引用prototype对象的属性和方法)
-// 3.将对象绑定到函数调用this
-// 4.除非函数返回一个它自己的其他对象，这个被new调用的函数自动返回这个新构建的对象
-// 执行new Dog()实际上市返回了一个新对象并赋值给dog1
+
 ```
-#### 构造函数
+##### 构造函数示例
 ```javascript
 function Person (name, year) {
     this.name = name;
@@ -84,46 +96,6 @@ function Person (name, year) {
 }
 var person1 = new Person('zero', '20');
 var person2 = new Person('john', '21');
-```
-#### 闭包
-> 闭包指的是有权访问另一个函数作用域中的变量，创建闭包的常见方式，就是在一个函数内部创建另一个函数
-
-```javascript
-//典型的闭包示例
-function createComparisonFunction (protypeName) {
-    return function (object1, object2) {
-        var value1 = object1[protypeName];
-        var value2 = object2[protypeName];
-        if (value1 < value2) {
-            return -1;
-        } else if (value1 > value2) {
-            return 1;
-        } else {
-            return 0;
-        }
-    }
-}
-//常见的一个问题
-//闭包只能取得包含函数中任何变量的最 后一个值
-function jisu () {
-    var result = [];
-    for (var i =0; i<10; i++) {
-        result[i] = function () {
-            return i;
-        }
-    }
-}
-//改成能够实现的函数
-function jisu () {
-    var result = [];
-    for (var i =0;i<10;i++) {
-        result[i] = function (num) {
-            return function () {
-                return num;
-            }
-        }(i)
-    }
-}
 ```
 #### 面向对象程序设计
 
