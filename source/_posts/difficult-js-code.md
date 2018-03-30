@@ -339,6 +339,7 @@ combinateEStack = [
 !!!! 递归数量过大存在栈溢出问题 可以使用尾递归优化，更建议使用for循环 如果是递归数量过大的时候
 ```
 #### js 数组去重方法之一
+##### ES5去重
 ```javascript
 //arr 举例 [1,2,1,2,3] || [1,'2',1,2,3]
 function arrUnique(arr){
@@ -385,4 +386,9 @@ function arrUnique(arr, key) {
 var thenew = arrUnique([12,3,1,12,1,5]);//[12, 3, 1, 5]
 var thenew = arrUnique([1,{id:'id',name:'jianxia'},3,3,{id:'id',name:"zero"},1],'id');//[1,{"id":"id","name":"jianxia"},3]
 console.log(JSON.stringify(thenew));
+```
+##### ES6去重
+```javascript
+Array.from(new Set([1,2,1,2,3,4,5]));
+
 ```
