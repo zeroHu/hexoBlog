@@ -4,6 +4,96 @@ date: 2017-10-10 15:44:48
 tags: js 困惑
 ---
 ### 好玩的算法逻辑题总汇
+#### 算法排序
+##### 冒泡排序
+![冒泡排序图_来源于网络](https://camo.githubusercontent.com/bc20131e2ee7ad70c06e7c71eefc04c3a3cc18a2/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313630393136313630373438333839)
+算法步骤
+* 第一步，比较相邻的元素。如果第一个比第二个大，就交换它们两个
+* 第二步，对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对，这样在最后的元素应该会是最大的数
+* 第三步，针对所有的元素重复以上的步骤，除了最后一个
+* 第四步，重复上面
+
+```javascript
+// 普通
+function unquieMaoPao (arr) {
+    var len = arr.length;
+    for(var i=0; i<len-1; i++) {
+        for(var j=0; j<len-i-1; j++) {
+            if(arr[j] > arr[j+1]){
+                var temp = arr[j]
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
+    return arr;
+}
+// 改良版 主要是避免本来就是排序正常的无效排序
+function unquieMaoPaoTwo (arr) {
+    var len = arr.length;
+    var i = len-1;
+    while(i > 0) {
+        var pos = 0;
+        for(var j=0; j<i; j++) {
+            if(arr[j] > arr[j+1]){
+                pos = j;
+                var temp = arr[j]
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+        i = pos;
+    }
+    return arr;
+}
+```
+##### 选择排序
+![选择排序动图_来源网络](https://camo.githubusercontent.com/603dd620708cd52e8d60af45ffbcb1c7986c98ba/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313630393136313634373534303133)
+算法步骤
+* 第一步，每个第一个与后面的比较如果更大或者更小就交换
+* 第二步，重复这个步骤arr.length次
+
+```javascript
+function unquieSelect (arr) {
+    var len = arr.length;
+    for (var i=0; i< len; i++) {
+        var temp = arr[i];
+        var pindex = i;
+        for (var j=i; j<len; j++) {
+            if (arr[pindex] < arr[j]) {
+                pindex = j;
+            }
+        }
+        arr[i] = arr[pindex];
+        arr[pindex] = temp;
+    }
+    return arr;
+}
+```
+##### 快速排序
+![快速排序动图_来源网络](https://camo.githubusercontent.com/253b22840353c9759694d63839fe7565d48f9df6/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313630393137303033303034393036)
+算法步骤
+* 从一个数组中挑出一个基准元素
+* 比之小的放左边，大的放右边
+* 循环
+
+```javascript
+function unquieKuaiPai (arr) {
+    if (arr.length <= 1) return arr;
+    var prvoid = Math.floor(arr.length /2);
+    var provoidIndex = arr.splice(prvoid, 1)[0];
+    var left = []
+    var right = []
+    for (var i=0; i<arr.length; i++) {
+        if (arr[i] < provoidIndex){
+            left.push(arr[i])
+        } else {
+            right.push(arr[i])
+        }
+    }
+    return unquieKuaiPai(left).concat([provoidIndex], unquieKuaiPai(right))
+}
+```
 
 #### 数组的排列组合
 ##### [[1,2],[3,4]] => [[1,3],[1,4],[2,3],[2,4]]
@@ -192,6 +282,7 @@ combinateEStack = [
         globalcontext
     ]
 ```
+
 #### 多重数组展开
 ```javascript
     function flaten1(arr) {
@@ -224,6 +315,7 @@ combinateEStack = [
         [6]
     ]]]]));
 ```
+
 #### 数组里面的数据拼接成最大数
 ```javascript
     // 数组里面的数据拼接成最大数
@@ -238,9 +330,8 @@ combinateEStack = [
         return +(arr.sort(compare).join(""));
     }
     console.log(maxNumber([2, 3, 31, 32, 5, 10, 1]));
-
-
 ```
+
 #### 长度不超过5位数的 数字转为中文大写
 ```javascript
     // 长度不超过5位数的 数字转为中文大写
@@ -276,6 +367,7 @@ combinateEStack = [
     }
     console.log(changeLangue(90991));
 ```
+
 #### 递归经典算法练习
 ```javascript
     // 递归的算法求递加
@@ -335,9 +427,9 @@ combinateEStack = [
         }
     }
     console.log(heneita(3, 'A', 'B', 'C'));
-
-!!!! 递归数量过大存在栈溢出问题 可以使用尾递归优化，更建议使用for循环 如果是递归数量过大的时候
+// !!!! 递归数量过大存在栈溢出问题 可以使用尾递归优化，更建议使用for循环 如果是递归数量过大的时候
 ```
+
 #### js 数组去重方法之一
 ##### ES5去重
 ```javascript
@@ -355,8 +447,6 @@ function arrUnique(arr){
         return [];
     }
 }
-
-
 // 数组去重 定义了可以去重{key:val}
 function arrUnique(arr, key) {
     var n = [arr[0]];
