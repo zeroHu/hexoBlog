@@ -6,7 +6,9 @@ tags: js 困惑
 ### 闭包和匿名函数的区别和关系，使用场景
 
 #### 闭包
-> <font color="red">闭包指的是有权访问另一个函数作用域中的变量，创建闭包的常见方式</font>，就是在一个函数内部创建另一个函数。或者说闭包是函数的嵌套，就是内层的函数可以访问外层函数的所有变量，即使外层函数已经执行完毕（涉及到javascript的作用域链）
+> <font color="blue">就是在一个函数内部创建另一个函数。或者说闭包是函数的嵌套，就是内层的函数可以访问外层函数的所有变量，即使外层函数已经执行完毕（涉及到javascript的作用域链）【忘了谁的博客】</font>
+  <font color="#ff9090">闭包就是函数能够记住并访问它的词法作用域，即使当这个函数在它的词法作用域之外执行【you don't know js】</font>
+  <font color="red">闭包指的是有权访问另一个函数作用域中的变量 【js 高程】</font>
 
 ##### 典型的闭包示例
 ```javascript
@@ -36,6 +38,7 @@ function jisu () {
             return i;
         }
     }
+    result[8](); //10
 }
 // 改成能够实现的函数
 function jisu () {
@@ -47,6 +50,20 @@ function jisu () {
             }
         }(i)
     }
+    result[8](); //8
+}
+
+function jisu () {
+    function test(i) {
+        return function() {
+            console.log(i)
+        }
+    }
+    var result = [];
+    for (var i=0; i<10; i++) {
+        result[i] = test(i)
+    }
+    result[8](); //8
 }
 ```
 ##### 原文地址
