@@ -45,3 +45,27 @@ tags: Css
 
 ##### 好文推荐
 > [font](http://justineo.github.io/slideshows/font/#/)
+
+#### BFC
+##### 定义
+> 浮动元素和绝对定位元素，非块级盒子的块级容器（inline-blocks, table-cells, 和 table-captions）以及overflow不为visiable的块级盒子，都会为他们的内容创建新的BFC
+
+##### 创建BFC的方式
+* 元素的`float` 不是 `none`
+* 元素的`postion`值是`absolute`或`fixed`
+* 元素的`display`值是`inline-block` || `table-cell`(HTML表格单元格默认为该值) || `table-caption`(HTML表格标题默认为该值) || `flow-root`
+* `overflow`不为`visible`的块元素
+* 弹性元素 (`display` 为 `flex` 或 `inline-flex`元素的直接子元素)
+* 网格元素 (`display` 为 `grid` 或 `inline-grid` 元素的直接子元素)
+
+**<font color="pink">创建了块格式化上下文的元素中的所有内容都会被包含到该BFC中</font>, <font>BFC中的元素的布局是不受外界的影响</font>**
+
+##### BFC特性
+* BFC内部BOX会在垂直方向，从顶部开始一个一个的放置
+* BFC内Box垂直方向的距离由margin决定，属于同一个BFC两个相邻的BOXmargin会发生叠加
+* BFC区域不会与float BOX叠加
+* BFC是页面上一个独立的容器，里面的元素不会受到外面的影响，反之亦然。
+* 计算BFC高度的时候，浮动元素也会参与计算。
+
+##### 参考资料
+> [深入理解](https://www.w3cplus.com/css/understanding-bfc-and-margin-collapse.html), [MDN](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)
