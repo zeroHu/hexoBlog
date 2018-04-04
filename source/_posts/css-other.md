@@ -36,6 +36,9 @@ tags: Css
 * 字体名为中文或包含空格等时，需要加双引号””才能正确识别;
 * 中文字体建议也是用其对应英文字体名，如”微软雅黑”为”Microsoft YaHei”，以提高编码兼容性。
 
+##### @font-face 浏览器支持
+> [查看文档]http://w3help.org/zh-cn/causes/RF1001
+
 ##### 参考文献
 > [w3](https://www.w3.org/TR/css-fonts-3/#font-weight-prop)
   [知乎大神顾轶灵](https://www.zhihu.com/question/20352846)
