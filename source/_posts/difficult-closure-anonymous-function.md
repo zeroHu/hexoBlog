@@ -52,7 +52,7 @@ function jisu () {
     }
     result[8](); //8
 }
-
+// 闭包写外面
 function jisu () {
     function test(i) {
         return function() {
