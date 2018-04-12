@@ -86,6 +86,28 @@ o.x = 'i am o'
 o.fn = test;
 o.fn(); // 'i am window'
 ```
+es5 的setTimeout 函数里面的this
+```javascript
+var o = {
+    a: '1',
+    fn: function() {
+        console.log(this.a);
+    }
+}
+setTimeout(o.fn, 1000); // undefined
+// 为什么会出现这种情况呢? setTimeout(function(){}, time)
+// 伪代码
+var sfn = function() {
+    console.log(this.a);
+}
+setTimeout(sfn, 1000);// 所以成了默认绑定，是window
+// 如何才能让输出 ‘1’呢
+setTimeout(function() {
+    o.fn()
+}, 1000)
+// 或者
+setTimeout(o.fn.bind(o))
+```
 这个是es6的this
 ```javascript
 var x = 'i am window';
