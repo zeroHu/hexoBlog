@@ -5,6 +5,7 @@ tags: ES6
 ---
 ### class
 > javascript 中，生成实例对象的传统方法是通过构造函数
+
 ```javascript
     function Point(x, y) {
         this.x = x
