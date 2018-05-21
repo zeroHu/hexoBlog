@@ -12,16 +12,18 @@ tags: Css
 <div class="center">111</div>
 ```
 ```css
+/* 第一种 margin */
 .center {
-  width:200px;
-  height:200px;
-  background:red;
-  margin;0 auto;
+  width: 200px;
+  height: 200px;
+  background: red;
+  margin; 0 auto;
 }
+/* 第二种 绝对定位 */
 .center {
-  position:absolute;
-  left:50%;
-  margin-left:100px;
+  position: absolute;
+  left: 50%;
+  margin-left: 100px;
 }
 ```
 > 定宽不定高div 水平居中
@@ -45,7 +47,7 @@ tags: Css
 ```
 ```css
 span {
-  text-align:center;
+  text-align: center;
 }
 ```
 #### 垂直居中初探
@@ -53,7 +55,8 @@ span {
 
 ```html
 <main>
-<h1>Am I centered yet?</h1> <p>Center me, please!</p>
+  <h1>Am I centered yet?</h1>
+  <p>Center me, please!</p>
 </main>
 ```
 
@@ -72,10 +75,10 @@ main {
 
 /*简写版*/
 main {
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 
