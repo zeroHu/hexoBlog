@@ -45,8 +45,8 @@ page:
   tags: 标签
 
 footer:
-  powered: "由 %s 强力驱动"
-  theme: 主题
+  powered: "%s 个人网站"
+  theme: gitHub地址
 
 counter:
   tag_cloud:

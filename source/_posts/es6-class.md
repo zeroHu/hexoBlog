@@ -23,24 +23,23 @@ tags: ES6
             this.y = y
         }
         toString() {
-            return '(' + this.x + ',' + this.y + ')' 
+            return '(' + this.x + ',' + this.y + ')'
         }
     }
     // 分解
-
     class Point2 {
         doStuff() {
             console.log('it is dostuff')
         }
     }
-    typeof(Point2) //"function"
-    Ponit2 === Point2.prototype.constructor
+    typeof(Point2) // "function"
+    Ponit2 === Point2.prototype.constructor // true
 
     let p = new Point2()
     p.doStuff() // it is dostuff
     // 构造函数的prototype属性，在es6类上面继续存在，事实上类的所有方法都定义在prototype属性上面
 ```
-上面的代码定义了一个”类“，里面的constructor方法，就是构造方法。this代表实例对象，也就是Es5的Point方法对应Es6de Point 方法
+上面的代码定义了一个”类“，里面的constructor方法，就是构造方法。this代表实例对象，也就是ES5的Point方法对应ES6 的 Point 方法
 
 > 由于类的方法都添加在prototype上面，所有类的新方法可以添加在prototype对象上面，Object.assign方法可以很方便的一次向类添加多个方法
 

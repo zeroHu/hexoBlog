@@ -11,9 +11,7 @@ tags: ES6
 ```javascript
 export var firstname = 'zero'
 export var name = 'hello'
-
 // 等价于
-
 var firstname = 'zero'
 var name = 'hello'
 export { firstname, name }

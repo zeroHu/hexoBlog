@@ -7,6 +7,8 @@ tags: Css
 > box-shadow 阴影是我们经常用的一个属性，但是却经常想不起来单边的阴影写法，记录下来，方便查阅（本方法 是查阅css secret 所获）
 
 #### 参数解释
+box-shadow: h-shadow v-shadow blur spread color inset;
+
 >   **h-shadow (必)： 水平移动距离 正值向右， 负值向左
     v-shadow (必)： 垂直移动距离 正值向下， 负值向上
     blur (选)：     模糊距离
