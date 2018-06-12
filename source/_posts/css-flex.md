@@ -256,4 +256,218 @@ tags: Css
     <div>3</div>
 </div>
 ```
+### CSS flex再探 [solved-by-flexbox](https://hufan-akari.github.io/solved-by-flexbox/)
+#### 简洁的栅格系统
+**栅格系统特性**
+* 每一行的每一个栅格默认都是同宽通告，默认自适应
+* 为了足够灵活，能够添加尺寸属性到单独的栅格中。没有添加的，仍然简单的平分剩下的可用空间
+* 支持响应式布局，可以添加媒体查询到栅格中
+* 每一个栅格可以在垂直方向上置顶，置底，居中
+* 栅格可以随意嵌套
+
+<font color="red">**basecss**<font>
+```css
+.grid {
+    display: flex;
+}
+
+.grid-cell {
+    flex: 1;
+    background: #ccc;
+}
+/* 修饰样式属性 不必要*/
+.retouch {
+    padding: 10px 0;
+    margin: 0 10px;
+}
+```
+##### 1/2栅格
+![1/2栅格](http://p5vxzph29.bkt.clouddn.com/flex-1-2.jpg)
+![1/2栅格特性](http://p5vxzph29.bkt.clouddn.com/flex-1-2-more.jpg)
+```html
+<div class="grid">
+    <div class="grid-cell retouch">1/2</div>
+    <div class="grid-cell retouch">1/2</div>
+</div>
+```
+```css
+/*css: basecss*/
+```
+##### 1/3栅格
+![1/3栅格](http://p5vxzph29.bkt.clouddn.com/flex-1-3.jpg)
+```html
+<div class="grid">
+    <div class="grid-cell retouch">1/3</div>
+    <div class="grid-cell retouch">1/3</div>
+    <div class="grid-cell retouch">1/3</div>
+</div>
+```
+```css
+/*css: basecss*/
+```
+##### 百分比尺寸和auto
+![1/2auto](http://p5vxzph29.bkt.clouddn.com/flex-1-2-auto.jpg)
+![1/4auto](http://p5vxzph29.bkt.clouddn.com/flex-1-4-auto.jpeg)
+```html
+<div class="grid">
+    <div class="grid-cell retouch grid-1of2">1/2</div>
+    <div class="grid-cell retouch">auto</div>
+    <div class="grid-cell retouch">auto</div>
+</div>
+```
+```html
+<div class="grid">
+    <div class="grid-cell retouch">auto</div>
+    <div class="grid-cell retouch">auto</div>
+    <div class="grid-cell retouch grid-1of4">1/4</div>
+    <div class="grid-cell retouch">auto</div>
+</div>
+```
+```css
+/* css: basecss */
+.grid-1of2 {
+    flex: 0 0 50%;
+}
+.grid-1of4 {
+    flex: 0 0 25%;
+}
+```
+##### 对齐属性
+![align-items 对齐属性](http://p5vxzph29.bkt.clouddn.com/flex-align-items.jpg)
+```html
+<div class="grid">
+    <div class="grid-cell retouch grid-self-top">我是置顶</div>
+    <div class="grid-cell retouch">我是内容特别多的我是内容特别多的我是内容特别多的我是内容特别多的我是内容特别多的我是内容特别多的我是内容特别多的我是内容特别多的我是内容特别多的我是内容特别多的我是内容特别多的我是内容特别多的我是内容特别多的我是内容特别多的我是内容特别多的我是内容特别多的我是内容特别多的我是内容特别多的我是内容特别多的我是内容特别多的</div>
+    <div class="grid-cell retouch grid-1of4">我是没加任何属性的</div>
+    <div class="grid-cell retouch grid-self-center">我是居中的</div>
+    <div class="grid-cell retouch grid-self-bottom">我是置底的</div>
+</div>
+```
+```css
+.grid {
+    display: flex;
+    align-items: flex-start;
+}
+
+.grid-cell {
+    flex: 1;
+    background: #ccc;
+}
+.grid-self-top {
+    align-self: flex-start;
+}
+.grid-self-center {
+    align-self: center;
+}
+.grid-self-bottom {
+    align-self: flex-end;
+}
+/* css: basecss 中的 retouch ; */
+```
+#### 圣杯布局
+![圣杯式](http://p5vxzph29.bkt.clouddn.com/flex-shengbei.jpg)
+```html
+<div class="holygrid">
+    <header>i am header</header>
+    <div class="content">
+        <main>i am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodi am content bodyi am i am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodi am content bodyi am i am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodi am content bodyi am i am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodyi am content bodi am content bodyi am </main>
+        <nav>
+            i am nav
+        </nav>
+        <aside>
+            i am aside
+        </aside>
+    </div>
+    <footer>i am footer</footer>
+</div>
+```
+```css
+.holygrid {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+}
+header, footer {
+    flex: none;
+}
+header {
+    width: 100%;
+    background: #eee;
+    height: 50px;
+}
+footer {
+    width: 100%;
+    background: #ccc;
+    height: 60px;
+}
+.content {
+    display: flex;
+}
+.content main {
+    flex: 1;
+}
+.content nav {
+    order: -1;
+}
+.content nav, .content aside {
+    flex: 0 0 12em;
+    padding: 1em;
+    background: #999;
+}
+```
+#### 输入input组件
+![input button 组件](http://p5vxzph29.bkt.clouddn.com/flex-input-grid.jpg)
+```html
+<div class="input-grid">
+    <input type="text">
+    <span class="input-button">send</span>
+</div>
+```
+```css
+.input-grid {
+    display: flex;
+}
+.input-grid input {
+    flex: 1;
+    padding: 10px 0;
+}
+.input-grid span {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px 0;
+    width: 50px;
+    border-radius: 0;
+    border-left: 0;
+}
+```
+#### 媒体对象
+![flex 用于媒体排列](http://p5vxzph29.bkt.clouddn.com/flex-media.jpg)
+```html
+<div class="media">
+    <div class="media-figure"></div>
+    <div class="media-body">
+        <h3>i am title</h3>
+        <p>i am des</p>
+        <p>i am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am contenti am content</p>
+    </div>
+</div>
+```
+
+```css
+.media {
+    display: flex;
+    align-items: flex-start;
+}
+.media-figure {
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
+    background: #eee;
+}
+.media-body {
+    flex: 1
+}
+```
+
+
 

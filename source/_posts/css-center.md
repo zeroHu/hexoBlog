@@ -17,7 +17,7 @@ tags: Css
   width: 200px;
   height: 200px;
   background: red;
-  margin; 0 auto;
+  margin: 0 auto;
 }
 /* 第二种 绝对定位 */
 .center {
@@ -37,7 +37,7 @@ tags: Css
 .center {
   width:200px;
   background:red;
-  margin;0 auto;
+  margin: 0 auto;
 }
 ```
 
@@ -92,6 +92,7 @@ main {
 }
 ```
 (flex 通用版 部分浏览器支持不太好)
+![flex-center](http://p5vxzph29.bkt.clouddn.com/flex-center.jpg)
 ```html
 <div class="container">
   <div class="center">xxx</div>
@@ -110,5 +111,17 @@ main {
   padding: 20px;
   margin: auto;
 }
-
+/* 或者 */
+.container {
+  width: 300px;
+  height: 300px;
+  background: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.center {
+  padding: 20px;
+  background: #ccc
+}
 ```
