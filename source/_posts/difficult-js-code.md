@@ -482,3 +482,25 @@ console.log(JSON.stringify(thenew));
 Array.from(new Set([1,2,1,2,3,4,5]));
 
 ```
+
+
+##### 相邻同数组归类 eg: [1,1,3,2,2] = [[1,1], [3], [2,2]]
+```javascript
+let [allArray, setArray] = [[], []];
+["a", "a", "c","d","d"].map((val, index, array) => {
+	if(index !== 0 && val === array[index-1]){
+		setArray.push(val);
+		if (index === array.length -1) {
+			allArray.push(setArray);
+		}
+	}
+	else {
+		index !== 0 && allArray.push(setArray);
+		setArray = [val];
+		if (index === array.length -1) {
+			allArray.push(setArray);
+		}
+	}
+})
+allArray = [["a", "a"], ["c"], ["d", "d"]]
+```
