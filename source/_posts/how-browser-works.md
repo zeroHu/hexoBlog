@@ -17,17 +17,17 @@ tags: other
 #### Dns LookUp
 > 输入的域名 -> 本地DNS服务器 -> 根DNS服务器 -> 本地域名服务器将ip发送到客户端主机
 
-![原理图](http://p5vxzph29.bkt.clouddn.com/dns-look.jpg)
+![原理图](http://static.zeroyh.cn/dns-look.jpg)
 #### Request a Page
 > 请求回来的二进制数据 -> 解析为字符 -> 解析成dom
 
-![原理图](http://p5vxzph29.bkt.clouddn.com/request-page.jpg)
+![原理图](http://static.zeroyh.cn/request-page.jpg)
 
 #### PARSE, RENDER, LAYOUT & PAINT
 > 解析html为dom 树结构(parsing html to construct the dom tree) -> 渲染树结构(render tree construction) -> 将结构布局到位置上(layout of the render tree) -> 绘制GUI整个结构(painting the render tree)
 
 render tree: DOM TREE + CSS == RENDER TREE
-![layout 图解](http://p5vxzph29.bkt.clouddn.com/render.jpg)
+![layout 图解](http://static.zeroyh.cn/render.jpg)
 
 #### 地址
 > http://arvindr21.github.io/howBrowserWorks/#/

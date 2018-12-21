@@ -5,7 +5,7 @@ tags: Css
 ---
 ### Shapes of Css [转自css-tricks](https://css-tricks.com/examples/ShapesOfCSS/)
 #### Square
-![正方形](http://p5vxzph29.bkt.clouddn.com/shapes-square.jpg)
+![正方形](http://static.zeroyh.cn/shapes-square.jpg)
 ```css
 #square {
     width: 100px;
@@ -14,7 +14,7 @@ tags: Css
 }
 ```
 #### Rectangle
-![长方形](http://p5vxzph29.bkt.clouddn.com/shapes-rectangle.jpg)
+![长方形](http://static.zeroyh.cn/shapes-rectangle.jpg)
 ```css
 #rectangle {
     width: 200px;
@@ -23,7 +23,7 @@ tags: Css
 }
 ```
 #### Circle
-![圆](http://p5vxzph29.bkt.clouddn.com/shapes-circle.jpg)
+![圆](http://static.zeroyh.cn/shapes-circle.jpg)
 ```css
 #circle {
     width: 100px;
@@ -33,7 +33,7 @@ tags: Css
 }
 ```
 #### Oval
-![椭圆](http://p5vxzph29.bkt.clouddn.com/shapes-oval.jpg)
+![椭圆](http://static.zeroyh.cn/shapes-oval.jpg)
 ```css
 #oval {
     width: 200px;
@@ -44,8 +44,8 @@ tags: Css
 ```
 > 原理解释
 
-![辅助解释原理图](http://p5vxzph29.bkt.clouddn.com/shapes-total-explain.jpg)
-![原理图](http://p5vxzph29.bkt.clouddn.com/shapes-total.jpg)
+![辅助解释原理图](http://static.zeroyh.cn/shapes-total-explain.jpg)
+![原理图](http://static.zeroyh.cn/shapes-total.jpg)
 ```css
 #total {
     /* 图一 */
@@ -68,7 +68,7 @@ tags: Css
 }
 ```
 #### Triangle Up
-![正三角形](http://p5vxzph29.bkt.clouddn.com/triangle-up.jpg)
+![正三角形](http://static.zeroyh.cn/triangle-up.jpg)
 ```css
 #triangle-up {
     width: 0;
@@ -79,7 +79,7 @@ tags: Css
 }
 ```
 #### Triangle Down
-![正三角形](http://p5vxzph29.bkt.clouddn.com/triangle-down.jpg)
+![正三角形](http://static.zeroyh.cn/triangle-down.jpg)
 ```css
 #triangle-down {
     width: 0;
@@ -90,7 +90,7 @@ tags: Css
 }
 ```
 #### Triangle Left
-![正三角形](http://p5vxzph29.bkt.clouddn.com/triangle-left.jpg)
+![正三角形](http://static.zeroyh.cn/triangle-left.jpg)
 ```css
 #triangle-left {
     width: 0;
@@ -101,7 +101,7 @@ tags: Css
 }
 ```
 #### Triangle Right
-![正三角形](http://p5vxzph29.bkt.clouddn.com/triangle-right.jpg)
+![正三角形](http://static.zeroyh.cn/triangle-right.jpg)
 ```css
 #triangle-right {
     width: 0;
@@ -113,8 +113,8 @@ tags: Css
 ```
 > 原理解释
 
-![lefttop](http://p5vxzph29.bkt.clouddn.com/shapes-lefttop-total.jpg)
-![rightbottom](http://p5vxzph29.bkt.clouddn.com/shapes-rightbottom-total.jpg)
+![lefttop](http://static.zeroyh.cn/shapes-lefttop-total.jpg)
+![rightbottom](http://static.zeroyh.cn/shapes-rightbottom-total.jpg)
 ```css
 #lefttop {
     /* 图一 */
@@ -133,7 +133,7 @@ tags: Css
 ```
 
 #### Triangle Top Left
-![直角topleft](http://p5vxzph29.bkt.clouddn.com/shapres-top-left.jpg)
+![直角topleft](http://static.zeroyh.cn/shapres-top-left.jpg)
 ```css
 #topleft {
     width: 0;
@@ -143,7 +143,7 @@ tags: Css
 }
 ```
 #### Triangle Top Right
-![直角topright](http://p5vxzph29.bkt.clouddn.com/shapes-right-top.jpg)
+![直角topright](http://static.zeroyh.cn/shapes-right-top.jpg)
 ```css
 #topright {
     width: 0;
@@ -153,7 +153,7 @@ tags: Css
 }
 ```
 #### Triangle Bottom Left
-![直角bottomleft](http://p5vxzph29.bkt.clouddn.com/shapes-bottom-left.jpg)
+![直角bottomleft](http://static.zeroyh.cn/shapes-bottom-left.jpg)
 ```css
 #bottomleft {
     width: 0;
@@ -163,7 +163,7 @@ tags: Css
 }
 ```
 #### Triangle Bottom Right
-![直角bottomright](http://p5vxzph29.bkt.clouddn.com/shapes-right-bottom.jpg)
+![直角bottomright](http://static.zeroyh.cn/shapes-right-bottom.jpg)
 ```css
 #bottomright {
     width: 0;
@@ -173,7 +173,7 @@ tags: Css
 }
 ```
 #### Curved Tail Arrow
-![符号图](http://p5vxzph29.bkt.clouddn.com/shapes-tail-arrow.jpg)
+![符号图](http://static.zeroyh.cn/shapes-tail-arrow.jpg)
 ```css
 #curvedarrow {
   position: relative;
@@ -203,7 +203,7 @@ tags: Css
 }
 ```
 #### Trapezoid
-![Trapezoid](http://p5vxzph29.bkt.clouddn.com/shapes-trapezoid.jpg)
+![Trapezoid](http://static.zeroyh.cn/shapes-trapezoid.jpg)
 ```css
 #trapezoid {
     border-bottom: 100px solid red;
@@ -214,7 +214,7 @@ tags: Css
 }
 ```
 #### Parallelogram
-![Parallelogram](http://p5vxzph29.bkt.clouddn.com/shapes-parallelogram.jpg)
+![Parallelogram](http://static.zeroyh.cn/shapes-parallelogram.jpg)
 ```css
 #parallelogram {
     width: 150px;
@@ -226,7 +226,7 @@ tags: Css
 }
 ```
 #### Star (6-points)
-![6-points](http://p5vxzph29.bkt.clouddn.com/shapes-start-six.jpg)
+![6-points](http://static.zeroyh.cn/shapes-start-six.jpg)
 ```css
 #star-six {
     width: 0;
@@ -249,7 +249,7 @@ tags: Css
 }
 ```
 #### Star (5-points)
-![6-points](http://p5vxzph29.bkt.clouddn.com/shapes-start-five.jpg)
+![6-points](http://static.zeroyh.cn/shapes-start-five.jpg)
 ```css
 #star-five {
    margin: 50px 0;
@@ -302,7 +302,7 @@ tags: Css
 }
 ```
 #### Pentagon
-![Pentagon](http://p5vxzph29.bkt.clouddn.com/shapes-pentagon.jpg)
+![Pentagon](http://static.zeroyh.cn/shapes-pentagon.jpg)
 ```css
 #pentagon {
     position: relative;
@@ -324,7 +324,7 @@ tags: Css
 }
 ```
 #### Hexagon
-![Hexagon](http://p5vxzph29.bkt.clouddn.com/shapes-hexagon.jpg)
+![Hexagon](http://static.zeroyh.cn/shapes-hexagon.jpg)
 ```css
 #hexagon {
     width: 100px;
@@ -356,7 +356,7 @@ tags: Css
 }
 ```
 #### Octagon
-![Octagon](http://p5vxzph29.bkt.clouddn.com/shapes-octagon.jpg)
+![Octagon](http://static.zeroyh.cn/shapes-octagon.jpg)
 ```css
 #octagon {
     width: 100px;
@@ -390,7 +390,7 @@ tags: Css
 }
 ```
 #### Heart
-![Heart](http://p5vxzph29.bkt.clouddn.com/shapes-heart.jpg)
+![Heart](http://static.zeroyh.cn/shapes-heart.jpg)
 ```css
 #heart {
     position: relative;
@@ -434,7 +434,7 @@ tags: Css
 }
 ```
 #### Infinity
-![Infinity](http://p5vxzph29.bkt.clouddn.com/shapes-infinity.jpg)
+![Infinity](http://static.zeroyh.cn/shapes-infinity.jpg)
 ```css
 #infinity {
     position: relative;
@@ -473,7 +473,7 @@ tags: Css
 }
 ```
 #### Diamond Square
-![Diamond Square](http://p5vxzph29.bkt.clouddn.com/shapes-dia-squere.jpg)
+![Diamond Square](http://static.zeroyh.cn/shapes-dia-squere.jpg)
 ```css
 #diamond {
     width: 0;
@@ -495,7 +495,7 @@ tags: Css
 }
 ```
 #### Diamond Shield
-![Diamond Shield](http://p5vxzph29.bkt.clouddn.com/shapes-dia-shaield.jpg)
+![Diamond Shield](http://static.zeroyh.cn/shapes-dia-shaield.jpg)
 ```css
 #diamond-shield {
     width: 0;
@@ -516,7 +516,7 @@ tags: Css
 }
 ```
 #### Diamond Narrow
-![Diamond Narrow](http://p5vxzph29.bkt.clouddn.com/shapes-dia-narrow.jpg)
+![Diamond Narrow](http://static.zeroyh.cn/shapes-dia-narrow.jpg)
 ```css
 #diamond-narrow {
     width: 0;
@@ -537,7 +537,7 @@ tags: Css
 }
 ```
 #### Cut Diamond
-![Cut Diamond](http://p5vxzph29.bkt.clouddn.com/shapes-cut-dia.jpg)
+![Cut Diamond](http://static.zeroyh.cn/shapes-cut-dia.jpg)
 ```css
 #cut-diamond {
     border-style: solid;
@@ -561,7 +561,7 @@ tags: Css
 }
 ```
 #### Egg
-![Egg](http://p5vxzph29.bkt.clouddn.com/shapes-egg.jpg)
+![Egg](http://static.zeroyh.cn/shapes-egg.jpg)
 ```css
 #egg {
    display:block;
@@ -573,7 +573,7 @@ tags: Css
 }
 ```
 #### Pac-Man
-![Pac-Man](http://p5vxzph29.bkt.clouddn.com/shapes-pac-man.jpg)
+![Pac-Man](http://static.zeroyh.cn/shapes-pac-man.jpg)
 ```css
 #pacman {
   width: 0px;
@@ -589,7 +589,7 @@ tags: Css
 }
 ```
 #### Talk Bubble
-![Talk Bubble](http://p5vxzph29.bkt.clouddn.com/shapes-talk-bubble.jpg)
+![Talk Bubble](http://static.zeroyh.cn/shapes-talk-bubble.jpg)
 ```css
 #talkbubble {
    width: 120px;
@@ -613,7 +613,7 @@ tags: Css
 }
 ```
 #### 12 Point Burst
-![12 Point Burst](http://p5vxzph29.bkt.clouddn.com/shapes-point-burst.jpg)
+![12 Point Burst](http://static.zeroyh.cn/shapes-point-burst.jpg)
 ```css
 #burst-12 {
     background: red;
@@ -645,7 +645,7 @@ tags: Css
 }
 ```
 #### 8 Point Burst
-![8 Point Burst](http://p5vxzph29.bkt.clouddn.com/shapes-eight-burst.jpg)
+![8 Point Burst](http://static.zeroyh.cn/shapes-eight-burst.jpg)
 ```css
 #burst-8 {
     background: red;
@@ -674,7 +674,7 @@ tags: Css
 
 ```
 #### Yin Yang
-![Yin Yang](http://p5vxzph29.bkt.clouddn.com/shapes-yinyang.jpg)
+![Yin Yang](http://static.zeroyh.cn/shapes-yinyang.jpg)
 ```css
 #yin-yang {
     width: 96px;
@@ -712,7 +712,7 @@ tags: Css
 }
 ```
 #### Badge Ribbon
-![Badge Ribbon](http://p5vxzph29.bkt.clouddn.com/shapes-badge-ribbon.jpg)
+![Badge Ribbon](http://static.zeroyh.cn/shapes-badge-ribbon.jpg)
 ```css
 #badge-ribbon {
  position: relative;
@@ -750,7 +750,7 @@ tags: Css
 
 ```
 #### Space Invader
-![Space Invader](http://p5vxzph29.bkt.clouddn.com/shapes-space-invader.jpg)
+![Space Invader](http://static.zeroyh.cn/shapes-space-invader.jpg)
 ```css
 #space-invader{
 
@@ -795,7 +795,7 @@ tags: Css
   }
 ```
 #### TV Screen
-![TV Screen](http://p5vxzph29.bkt.clouddn.com/shapes-tv-screen.jpg)
+![TV Screen](http://static.zeroyh.cn/shapes-tv-screen.jpg)
 ```css
 #tv {
   position: relative;
@@ -821,7 +821,7 @@ tags: Css
 
 ```
 #### Chevron
-![Chevron](http://p5vxzph29.bkt.clouddn.com/shapes-chevron.jpg)
+![Chevron](http://static.zeroyh.cn/shapes-chevron.jpg)
 ```css
 #chevron {
   position: relative;
@@ -863,7 +863,7 @@ tags: Css
 
 ```
 #### Magnifying Glass
-![Magnifying Glass](http://p5vxzph29.bkt.clouddn.com/shapes-search-icon.jpg)
+![Magnifying Glass](http://static.zeroyh.cn/shapes-search-icon.jpg)
 ```css
 #magnifying-glass
 {
@@ -893,7 +893,7 @@ tags: Css
 }
 ```
 #### Facebook Icon
-![Facebook Icon](http://p5vxzph29.bkt.clouddn.com/shapes-facebook-icon.jpg)
+![Facebook Icon](http://static.zeroyh.cn/shapes-facebook-icon.jpg)
 ```css
 #facebook-icon {
   background: red;
@@ -928,7 +928,7 @@ tags: Css
 }
 ```
 #### Moon
-![Moon](http://p5vxzph29.bkt.clouddn.com/shapes-moon.jpg)
+![Moon](http://static.zeroyh.cn/shapes-moon.jpg)
 ```css
 #moon {
   width: 80px;
@@ -938,7 +938,7 @@ tags: Css
 }
 ```
 #### Flag
-![Flag](http://p5vxzph29.bkt.clouddn.com/shapes-flag.jpg)
+![Flag](http://static.zeroyh.cn/shapes-flag.jpg)
 ```css
 #flag {
   width: 110px;
@@ -965,7 +965,7 @@ tags: Css
 }
 ```
 #### Cone
-![Cone](http://p5vxzph29.bkt.clouddn.com/shapes-cross.jpg)
+![Cone](http://static.zeroyh.cn/shapes-cross.jpg)
 ```css
 #cross {
   background: red;
@@ -984,7 +984,7 @@ tags: Css
 }
 ```
 #### Base
-![Base](http://p5vxzph29.bkt.clouddn.com/shapes-base.jpg)
+![Base](http://static.zeroyh.cn/shapes-base.jpg)
 ```css
 #base {
   background: red;
@@ -1008,7 +1008,7 @@ tags: Css
 }
 ```
 #### Pointer
-![Pointer](http://p5vxzph29.bkt.clouddn.com/shapes-pointer.jpg)
+![Pointer](http://static.zeroyh.cn/shapes-pointer.jpg)
 ```css
 #pointer {
     width: 200px;
