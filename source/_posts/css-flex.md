@@ -5,7 +5,7 @@ tags: Css
 ---
 ### CSS flex 初探
 #### flex 一行多个单元格布局
-![图片](http://oqt0cgoq9.bkt.clouddn.com/css-flex-1.jpg)
+![图片](http://static.zeroyh.cn/css-flex-1.jpg)
 ```css
 /*css内容*/
 .flex-container {
@@ -30,7 +30,7 @@ tags: Css
 </div>
 ```
 #### flex布局之垂直居中
-![图片](http://oqt0cgoq9.bkt.clouddn.com/css-flex-2.jpg)
+![图片](http://static.zeroyh.cn/css-flex-2.jpg)
 ```css
 /*css内容*/
 .flex-middle-center {
@@ -55,7 +55,7 @@ tags: Css
 ```
 
 #### flex布局之 数列排序
-![图片](http://oqt0cgoq9.bkt.clouddn.com/css-flex-3.jpg)
+![图片](http://static.zeroyh.cn/css-flex-3.jpg)
 ```css
 /*css内容*/
 .flex-column {
@@ -80,7 +80,7 @@ tags: Css
 ```
 
 #### flex justify-content示例
-![图片](http://oqt0cgoq9.bkt.clouddn.com/css-flex-4.jpg)
+![图片](http://static.zeroyh.cn/css-flex-4.jpg)
 ```css
 /*css内容*/
 .flex-justify-content {
@@ -110,10 +110,10 @@ tags: Css
   * space-between
   * space-around
 
-![图片](http://oqt0cgoq9.bkt.clouddn.com/css-flex-5.jpg)
+![图片](http://static.zeroyh.cn/css-flex-5.jpg)
 
 #### flex align-items示例
-![图片](http://oqt0cgoq9.bkt.clouddn.com/css-flex-7.jpg)
+![图片](http://static.zeroyh.cn/css-flex-7.jpg)
 
 ```css
 /*css内容*/
@@ -148,10 +148,10 @@ tags: Css
   * baseline
   * stretch
 
-![图片](http://oqt0cgoq9.bkt.clouddn.com/css-flex-6.jpg)
+![图片](http://static.zeroyh.cn/css-flex-6.jpg)
 
 #### flex-wrap示例
-![图片](http://oqt0cgoq9.bkt.clouddn.com/css-flex-8.jpg)
+![图片](http://static.zeroyh.cn/css-flex-8.jpg)
 
 ```css
 /*css内容*/
@@ -197,7 +197,7 @@ tags: Css
   * wrap-reverse
 
 #### flex align-content示例
-![图片](http://oqt0cgoq9.bkt.clouddn.com/css-flex-9.jpg)
+![图片](http://static.zeroyh.cn/css-flex-9.jpg)
 ```css
 /*css内容*/
 .flex-align-content {
@@ -231,7 +231,7 @@ tags: Css
 ```
 
 #### flex margin-right设值
-![图片](http://oqt0cgoq9.bkt.clouddn.com/css-flex-10.jpg)
+![图片](http://static.zeroyh.cn/css-flex-10.jpg)
 ```css
 /*css内容*/
 .flex-margin-auto {
