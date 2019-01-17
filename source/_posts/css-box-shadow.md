@@ -17,7 +17,7 @@ box-shadow: h-shadow v-shadow blur spread color inset;
     inset (选):     将外部阴影改为内部阴影**
 
 #### 投影原理解释
-![图片](http://oqt0cgoq9.bkt.clouddn.com/box-shadow.jpeg)
+![图片](http://static.zeroyh.cn/box-shadow.jpeg)
 
 步骤:
 * (1) 以该元素相同的尺寸11和位置，画一个 rgba(0,0,0,.5) 的矩形。
@@ -31,7 +31,7 @@ box-shadow: h-shadow v-shadow blur spread color inset;
 }
 ```
 #### 单边阴影
-![图片](http://static.zeroyh.cn/boxshadow-four.jpeg)
+![图片](http://upload.zeroyh.cn/boxshadow-four.jpeg)
 > 原理解析：最终的解决方案来自 box-shadow 鲜为人知的第四个长度参数。它排在 模糊半径参数之后，称作扩张半径。这个参数会根据你指定的值去扩大或 (当指定负值时)缩小投影的尺寸。举例来说，一个 -5px 的扩张半径会把投影的宽度和高度各减少 10px(即每边各 5px)。
 
 ```css
@@ -60,7 +60,7 @@ div {
 
 ```
 #### 邻边阴影
-![图片](http://static.zeroyh.cn/boxshadow-two.jpeg)
+![图片](http://upload.zeroyh.cn/boxshadow-two.jpeg)
 > 原理解析:可以使用3个参数的方案，注意调节阴影值和偏移值得大小即可
 
 ```css
@@ -73,7 +73,7 @@ div {
 ```
 
 #### 双侧阴影
-![图片](http://static.zeroyh.cn/boxshadow-three.jpeg)
+![图片](http://upload.zeroyh.cn/boxshadow-three.jpeg)
 > 原理解析:当我们想把投影设置在元素的两条对边(比如左侧和右侧)时，事情就 变得棘手了。因为扩张半径在四个方向上的作用是均等的(也就是说，我们 无法指定投影在水平方向上放大，而在垂直方向上缩小)11，唯一的办法是用 两块投影(每边各一块)来达到目的。然后基本上就是把“单侧投影”中的 技巧运用两次:
 
 ```css
@@ -86,7 +86,7 @@ div {
 ```
 
 #### 三侧阴影
-![图片](http://static.zeroyh.cn/boxshadow-eight.jpeg)
+![图片](http://upload.zeroyh.cn/boxshadow-eight.jpeg)
 ```css
 .box-shadow1 {
     box-shadow: 0px 7px 5px -2px blue, 7px 0px 5px -2px red, -7px 0px 5px -2px green;
@@ -107,7 +107,7 @@ div {
 ```
 
 #### 四侧阴影
-![图片](http://static.zeroyh.cn/boxshadow-six.jpeg)
+![图片](http://upload.zeroyh.cn/boxshadow-six.jpeg)
 ```css
     .all {
       box-shadow: 0 0 12px #000;

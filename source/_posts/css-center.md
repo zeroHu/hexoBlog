@@ -92,7 +92,7 @@ main {
 }
 ```
 (flex 通用版 部分浏览器支持不太好)
-![flex-center](http://static.zeroyh.cn/flex-center.jpg)
+![flex-center](http://upload.zeroyh.cn/flex-center.jpg)
 ```html
 <div class="container">
   <div class="center">xxx</div>

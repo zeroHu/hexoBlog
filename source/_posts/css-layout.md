@@ -6,7 +6,7 @@ tags: Css
 ### 布局篇
 
 #### css 常见的flex 布局篇
-![图片](http://oqt0cgoq9.bkt.clouddn.com/css-layout-1.jpg)
+![图片](http://static.zeroyh.cn/css-layout-1.jpg)
 ```css
 /*css*/
 div.container-flex {
@@ -36,7 +36,7 @@ div.container-flex {
 ```
 
 #### 常见的float布局篇
-![图片](http://oqt0cgoq9.bkt.clouddn.com/css-layout-2.jpg)
+![图片](http://static.zeroyh.cn/css-layout-2.jpg)
 ```css
 /*css*/
 .container-float {
@@ -76,7 +76,7 @@ div.container-flex {
 ```
 
 #### 常见的inline-block布局篇
-![图片](http://oqt0cgoq9.bkt.clouddn.com/css-layout-3.jpg)
+![图片](http://static.zeroyh.cn/css-layout-3.jpg)
 ```css
 /*css*/
 .container-inlineBlock div {
