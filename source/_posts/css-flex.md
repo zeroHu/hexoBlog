@@ -282,8 +282,8 @@ tags: Css
 }
 ```
 ##### 1/2栅格
-![1/2栅格](http://static.zeroyh.cn/flex-1-2.jpg)
-![1/2栅格特性](http://static.zeroyh.cn/flex-1-2-more.jpg)
+![1/2栅格](http://upload.zeroyh.cn/flex-1-2.jpg)
+![1/2栅格特性](http://upload.zeroyh.cn/flex-1-2-more.jpg)
 ```html
 <div class="grid">
     <div class="grid-cell retouch">1/2</div>
@@ -294,7 +294,7 @@ tags: Css
 /*css: basecss*/
 ```
 ##### 1/3栅格
-![1/3栅格](http://static.zeroyh.cn/flex-1-3.jpg)
+![1/3栅格](http://upload.zeroyh.cn/flex-1-3.jpg)
 ```html
 <div class="grid">
     <div class="grid-cell retouch">1/3</div>
@@ -306,8 +306,8 @@ tags: Css
 /*css: basecss*/
 ```
 ##### 百分比尺寸和auto
-![1/2auto](http://static.zeroyh.cn/flex-1-2-auto.jpg)
-![1/4auto](http://static.zeroyh.cn/flex-1-4-auto.jpeg)
+![1/2auto](http://upload.zeroyh.cn/flex-1-2-auto.jpg)
+![1/4auto](http://upload.zeroyh.cn/flex-1-4-auto.jpeg)
 ```html
 <div class="grid">
     <div class="grid-cell retouch grid-1of2">1/2</div>
@@ -333,7 +333,7 @@ tags: Css
 }
 ```
 ##### 对齐属性
-![align-items 对齐属性](http://static.zeroyh.cn/flex-align-items.jpg)
+![align-items 对齐属性](http://upload.zeroyh.cn/flex-align-items.jpg)
 ```html
 <div class="grid">
     <div class="grid-cell retouch grid-self-top">我是置顶</div>
@@ -365,7 +365,7 @@ tags: Css
 /* css: basecss 中的 retouch ; */
 ```
 #### 圣杯布局
-![圣杯式](http://static.zeroyh.cn/flex-shengbei.jpg)
+![圣杯式](http://upload.zeroyh.cn/flex-shengbei.jpg)
 ```html
 <div class="holygrid">
     <header>i am header</header>
@@ -416,7 +416,7 @@ footer {
 }
 ```
 #### 输入input组件
-![input button 组件](http://static.zeroyh.cn/flex-input-grid.jpg)
+![input button 组件](http://upload.zeroyh.cn/flex-input-grid.jpg)
 ```html
 <div class="input-grid">
     <input type="text">
@@ -441,7 +441,7 @@ footer {
 }
 ```
 #### 媒体对象
-![flex 用于媒体排列](http://static.zeroyh.cn/flex-media.jpg)
+![flex 用于媒体排列](http://upload.zeroyh.cn/flex-media.jpg)
 ```html
 <div class="media">
     <div class="media-figure"></div>
