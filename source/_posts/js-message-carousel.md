@@ -22,7 +22,7 @@ tags: javascript
 ```css
   div,ul,li {
     margin: 0;
-    padding: 0
+    padding: 0;
   }
 
   .notice {
