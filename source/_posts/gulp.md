@@ -100,5 +100,5 @@ gulp.task("watch", function() {
     ], ["css"]);
 });
 ```
-![目录图](http://oqt0cgoq9.bkt.clouddn.com/gulp-dir.jpg)
+![目录图](http://static.zeroyh.cn/gulp-dir.jpg)
 [项目地址](https://github.com/zeroHu/gulp-webpack)

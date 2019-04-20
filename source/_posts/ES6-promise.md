@@ -229,7 +229,7 @@ function testPromise(){
         })
 }
 ```
-![图片](http://oqt0cgoq9.bkt.clouddn.com/example-promise.jpeg)
+![图片](http://static.zeroyh.cn/example-promise.jpeg)
 
 ### promise 模拟实现过程
 #### 一个简单版本的实现

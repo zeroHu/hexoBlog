@@ -4,7 +4,7 @@ date: 2017-12-02 16:11:53
 tags: wechat
 ---
 #### 如何填写微信公众号的基本配置
-![wehchat-token](http://oqt0cgoq9.bkt.clouddn.com/wechat-token.jpeg)
+![wehchat-token](http://static.zeroyh.cn/wechat-token.jpeg)
 
 ##### 设置这个服务器的token
 

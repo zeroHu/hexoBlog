@@ -5,7 +5,7 @@ tags: javascript
 ---
 ### 全栈掌握知识点自理
 #### 知识点梳理
-![图片](http://oqt0cgoq9.bkt.clouddn.com/full-stack-1.jpg)
+![图片](http://static.zeroyh.cn/full-stack-1.jpg)
 
 #### 什么是全栈开发
 * Web网站的构成
