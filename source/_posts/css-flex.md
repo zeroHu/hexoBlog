@@ -196,6 +196,51 @@ tags: Css
   * wrap
   * wrap-reverse
 
+![img](http://static.zeroyh.cn/flex-wrap-value.png)
+
+flex-wrap 图css
+```css
+/* Common Styles */
+.content,
+.content1,
+.content2 {
+    color: #fff;
+    font: 100 24px/100px sans-serif;
+    height: 150px;
+    text-align: center;
+}
+
+.content div,
+.content1 div,
+.content2 div {
+    height: 50%;
+    width: 300px;
+}
+.red {
+    background: orangered;
+}
+.green {
+    background: yellowgreen;
+}
+.blue {
+    background: steelblue;
+}
+
+/* Flexbox Styles */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+.content1 {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.content2 {
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+```
+
 #### flex align-content示例
 ![图片](http://static.zeroyh.cn/css-flex-9.jpg)
 ```css
