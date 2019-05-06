@@ -10,13 +10,13 @@ tags: seeLearn
 **既然作为一名程序员，先贴计算的代码**
 
 ```javascript
-const Years = 20;       // 复利年限 (也就是存款的年数)
+const years = 20;       // 复利年限 (也就是存款的年数)
 let allMoney = 4000000; // 初始金额 (400w 现在是以一个北京4环左右的房子来说作为初始金额)
 let rate = 1.05;        // 利率 5% (这个利率是真的不高了，买理财产品就可以了。如果更高的利率那就更可怕的数据了。 )
 
 // 计算的函数
 function compute(rate) {
-  for (let i=1; i<=Years; i++) {
+  for (let i=1; i<=years; i++) {
     allMoney = allMoney * rate;
   }
   console.log('now year', i, 'now money', allMoney);
