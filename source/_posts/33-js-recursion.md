@@ -72,6 +72,6 @@ factorial(4, 1);
 // factorial(4, 1) = 24
 ```
 
-> summarize : the tail call in stack is less, in v8 can spend less time
+> summarize : the tail call is better than recursion, in v8 can spend less time
 
 ![](http://static.zeroyh.cn/33-WechatIMG734.png)
