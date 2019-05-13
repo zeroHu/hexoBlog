@@ -56,3 +56,4 @@ console.log(c1, c2, c3);
 **reference doc**
 > [dailyjs](https://medium.com/dailyjs/i-never-understood-javascript-closures-9663703368e8)
 > [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
+> [jsinfo](https://zh.javascript.info/closure)
