@@ -14,7 +14,7 @@ a call stack is a data structure that uses the last in, first out(IIFO) principl
 #### why js is a single threaded single concurrent language
 > as we know that javascript is a single threaded single concurrent language. but what's mean??? that means at a time js only can deal one task or a a piece of code. it has a single call stack which along with other parts like heap, queue constitutes the javascript concurrency modal.
 
-![](https://cdn-images-1.medium.com/max/1600/1*ZSFHnq9iMHIApVLcgwczPQ.png)
+![](http://static.zeroyh.cn/1_ZSFHnq9iMHIApVLcgwczPQ.png)
 
 #### just to know how is js code run
 * when a script calls a function, the interpreter adds it to the call stack.
@@ -39,7 +39,7 @@ console.log(foo());
 // 5. then the foo is pop off the call back
 // 6. then the `console.log(foo())` is pop off the call stack
 ```
-![the foo and bar run gif](https://cdn-images-1.medium.com/max/1600/1*E3zTWtEOiDWw7d0n7Vp-mA.gif)
+![the foo and bar run gif](http://static.zeroyh.cn/1_E3zTWtEOiDWw7d0n7Vp-mA.gif)
 ![the error show the call stack](http://static.zeroyh.cn/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-05-22%20%E4%B8%8B%E5%8D%8810.03.00.png)
 
 **refrence doc**
