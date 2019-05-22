@@ -2,6 +2,7 @@
 title: css-grid
 date: 2018-01-23 18:09:52
 tags: Css
+keywords: css grid，grid，栅栏式布局，网格轨道
 ---
 ### css-grid
 > grid 是一组相交的水平线和垂直线，特点：固定或弹性的轨道尺寸，定位项目，创建额外的轨道来保存项目，对齐控制，控制折叠内容。

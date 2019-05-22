@@ -2,6 +2,7 @@
 title: compound-rate
 date: 2019-05-06 15:15:51
 tags: seeLearn
+keywords: 复利，how to compute your money
 ---
 ### 日常所见所想
 #### 复利的力量

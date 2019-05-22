@@ -2,6 +2,7 @@
 title: es6-promise
 date: 2017-07-10 19:14:47
 tags: ES6
+keywords: es6 promise，promise详解，promise and ajax，promise和ajax对比解析
 ---
 ### promise 理念
 #### promise

@@ -2,6 +2,7 @@
 title: ajax-http-body
 date: 2018-02-08 16:35:29
 tags: XMLHttpRequest
+keywords: http请求， x-www-form-urlencoded， form-data，application/json
 ---
 ### 常见的post提交数据格式 <br>form-data,x-www-form-urlencoded,application/json,text/xml
 

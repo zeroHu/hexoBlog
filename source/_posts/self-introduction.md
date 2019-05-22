@@ -3,6 +3,7 @@ title: self introduction
 date: 2019-01-15 11:20:09
 tags: 自我介绍
 top: true
+keywords: zero self introduction, zero, zero blog, who is zero
 ---
 ### 自我介绍
 

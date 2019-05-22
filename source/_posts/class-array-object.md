@@ -2,6 +2,7 @@
 title: class-array-object（类数组对象）
 date: 2017-12-08 15:17:13
 tags: javascript
+keywords: 类数组对象
 ---
 #### 类数组对象
 

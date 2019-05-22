@@ -2,6 +2,7 @@
 title: css-box-shadow
 date: 2017-08-02 09:37:33
 tags: Css
+keywords: css, box-shadow, 阴影，css box-shadow 详解，css box-shadow 四侧阴影，详解，css box-shadow 三侧阴影，详解，css box-shadow 双侧阴影，详解，css box-shadow 单侧阴影
 ---
 ### box-shadow
 > box-shadow 阴影是我们经常用的一个属性，但是却经常想不起来单边的阴影写法，记录下来，方便查阅（本方法 是查阅css secret 所获）

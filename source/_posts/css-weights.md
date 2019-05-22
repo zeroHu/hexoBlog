@@ -2,6 +2,7 @@
 title: css-weights
 date: 2018-03-21 16:28:54
 tags: Css
+keywords: css 权重
 ---
 ### CSS 权重
 > 权重决定了css规则怎样被浏览器解析到生效，即你的css规则是如何被显示的

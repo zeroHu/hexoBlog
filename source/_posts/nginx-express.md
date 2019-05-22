@@ -2,6 +2,7 @@
 title: nginx-express
 date: 2017-09-28 17:11:10
 tags: nginx
+keywords: express 项目的nginx配置，nginx-express配置
 ---
 #### nginx 如何能够代理到express这样的localhost:3000这样的页面
 ```nginx

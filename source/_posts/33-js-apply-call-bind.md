@@ -2,6 +2,7 @@
 title: 33-js-apply-call-bind
 date: 2019-05-09 16:44:04
 tags: 33-js-concepts
+keywords: apply, call, bind
 ---
 ### how to use apply, call, bind 
 > when I want to write this blog, I feel so sad, because I know how to use, but I cannot not explain why so? and involving this and prototype ...

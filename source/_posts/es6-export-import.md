@@ -2,6 +2,7 @@
 title: es6-export-import
 date: 2018-04-10 19:06:22
 tags: ES6
+keywords: es6，export，import，module
 ---
 ### es6 的模块
 > 模块就是一个对其他模块暴露自己的属性和方法的文件。

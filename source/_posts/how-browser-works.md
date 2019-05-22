@@ -2,6 +2,7 @@
 title: how-browser-works
 date: 2018-03-27 11:16:46
 tags: other
+keywords: 浏览器的工作原理， how browser works
 ---
 ### 图解browser work
 #### 当你向浏览器地址栏输入http://www.google.com会发生什么呢

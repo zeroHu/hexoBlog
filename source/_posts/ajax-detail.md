@@ -2,6 +2,7 @@
 title: ajax 请求参数详情，cache 理解
 date: 2017-08-18 15:56:38
 tags: XMLHttpRequest
+keywords: url， http结构， request header参数详解， response header详解，ajax参数解释，缓存机制
 ---
 ### url参数详解
 

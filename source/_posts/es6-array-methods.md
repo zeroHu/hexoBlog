@@ -2,6 +2,7 @@
 title: Why and when to use forEach, map, filter, reduce, and find in JavaScript
 date: 2019-05-07 15:03:45
 tags: ES6
+keywords: es6 array常用方法， forEach，es6，map，reduce，filter
 ---
 ### Maybe change use for in anywhere is better
 #### forEach

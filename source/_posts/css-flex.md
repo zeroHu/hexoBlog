@@ -2,6 +2,7 @@
 title: css-flex
 date: 2017-09-07 18:10:53
 tags: Css
+keywords: css flex, flex 多个单元格布局， flex布局之居中，flex布局数列排序，flex justify-content示例，flex-wrap，align-content，flex栅栏式布局
 ---
 ### CSS flex 初探
 #### flex 一行多个单元格布局

@@ -2,6 +2,7 @@
 title: es6-generator
 date: 2017-12-18 10:54:15
 tags: ES6
+keywords: es6 generator
 ---
 ### Generator函数
 > generator 函数是es6提供的一种异步编程解决方案，语法行为与传统函数完全不同.generator 函数是一个状态机，封装了多个内部状态。执行generator函数会返回一个遍历器对象，也就是generator函数除了状态机，还是一个遍历器对象生成函数，返回的遍历器对象，可以一次遍历generator函数内部的每一个状态

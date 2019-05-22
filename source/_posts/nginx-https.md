@@ -2,6 +2,7 @@
 title: https-nginx
 date: 2017-12-02 15:59:39
 tags: nginx
+keywords: https的nginx的配置示例，阿里云服务器配置https
 ---
 #### 最新鲜的nginx 配置https 踩坑出来了
 > 看到阿里云已经开始不卖免费的ssl证书了，吓得我赶紧取七牛上买了20个放着，想着之前也没给自己的网站配置，感觉需要自己实践一遍，才能出真知啊

@@ -6,7 +6,7 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "zero blog, zero, javascript, es6, css, nginx"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -32,10 +32,10 @@ copyright: true
 canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
-seo: false
+seo: true
 
 # If true, will add site-subtitle to index page, added in main hexo config.
-# subtitle: Subtitle
+subtitle: "zero's blog record life and study"
 index_with_subtitle: false
 
 # ---------------------------------------------------------------
@@ -302,7 +302,7 @@ han: false
 #swiftype_key:
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: 1f8f6a594c063c0310d9f802192fe940
 
 # Duoshuo ShortName
 #duoshuo_shortname:

@@ -2,6 +2,7 @@
 title: es6-class
 date: 2018-01-01 09:58:26
 tags: ES6
+keywords: es6 类， class
 ---
 ### class
 > javascript 中，生成实例对象的传统方法是通过构造函数

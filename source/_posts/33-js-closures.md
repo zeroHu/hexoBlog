@@ -2,6 +2,7 @@
 title: 33-js-closures
 date: 2019-05-13 14:45:53
 tags: 33-js-concepts
+keywords: closures, 闭包
 ---
 ### closures
 first we should know closures is what ?

@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: zeroblog
-subtitle: zero的个人博客
-description: hujianxia4@gmail.com
+title: zeroBlog
+subtitle: zero's life and study record
+description: just do it
 author: zero
 language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://blog.zeroyh.cn
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
