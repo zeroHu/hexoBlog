@@ -1,7 +1,7 @@
 ---
 title: js 传值方式
 date: 2018-04-13 11:29:13
-tags: js 困惑
+tags: JsHighLeval
 ---
 ### 挖掘js 传值方式
 #### 值的存储方式 （[图的来源](https://yangbo5207.github.io/wutongluo/ji-chu-jin-jie-xi-lie/yi-3001-nei-cun-kong-jian-xiang-jie.html))

@@ -2,7 +2,7 @@
 title: html2canvas
 date: 2018-03-27 11:25:19
 tags: canvas
-keywords: html2canvas 示例
+keywords: html2canvas 示例, canvas
 ---
 ### html2canvas
 > 小记： 神器 html2canvas记，是有这么个需求，需要生成一个新闻卡片，然后如果直接用canvas画的情况呢，比较复杂，文本内容需要分段而且还需要控制字数，直接用html，css来写呢就会非常的便捷了，众里寻他千百度。蓦然回首，那人却在，[html2canvas](http://html2canvas.hertzen.com/getting-started/)。使用版本记录：html2canvas 1.0.0-alpha.10

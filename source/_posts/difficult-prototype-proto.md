@@ -1,7 +1,7 @@
 ---
 title: prototype __proto__ 的区别和联系
 date: 2018-03-29 11:08:53
-tags: js 困惑
+tags: JsHighLeval
 keywords: prototype __proto__ 的区别和联系
 ---
 ### prototype和__proto__

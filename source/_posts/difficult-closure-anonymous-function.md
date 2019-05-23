@@ -1,7 +1,7 @@
 ---
 title: 闭包 和 匿名函数
 date: 2018-03-29 17:58:56
-tags: js 困惑
+tags: JsHighLeval
 keywords: js closures, anonymous function，闭包，匿名函数
 ---
 ### 闭包和匿名函数的区别和关系，使用场景

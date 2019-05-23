@@ -1,7 +1,7 @@
 ---
 title: ppt sell
 date: 2018-12-14 14:51:27
-tags: seeLearn
+tags: Thoughts
 ---
 ### 日常所见所学
 #### 非常有趣的ppt推销法 （最有效的五部推销法）

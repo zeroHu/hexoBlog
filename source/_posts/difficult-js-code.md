@@ -1,7 +1,7 @@
 ---
 title: interest-code
 date: 2017-10-10 15:44:48
-tags: js 困惑
+tags: JsHighLeval
 ---
 ### 好玩的算法逻辑题总汇
 #### 算法排序
