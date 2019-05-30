@@ -9,22 +9,34 @@ keywords: 复利，how to compute your money
 > 一直认为把钱存银行就是一个放移动保险柜的功能，怕丢！没想过涨钱。因为总的来说基本没感觉涨过钱，首先啊，我没啥钱，然后啊，那点利息算起来真的让我心酸。我觉得我算的过程的价值都比那点利息高。直到今日！！！幡然悔悟~ maybe 你看到了也会悔悟。接下来用数据打脸
 
 **既然作为一名程序员，先贴计算的代码**
+> 计算公式： Fn = P x (1 + i)的n次方
 
 ```javascript
-const years = 20;       // 复利年限 (也就是存款的年数)
-let allMoney = 4000000; // 初始金额 (400w 现在是以一个北京4环左右的房子来说作为初始金额)
-let rate = 1.05;        // 利率 5% (这个利率是真的不高了，买理财产品就可以了。如果更高的利率那就更可怕的数据了。 )
+const years = 20;        // 复利年限 (也就是存款的年数)
+let allMoney = 4000000;  // 初始金额 (400w 现在是以一个北京4环左右的房子来说作为初始金额)
+let firstMoney = 4000000;// 初始金额
+let rate = 1.05;         // 利率 5% (这个利率是真的不高了，买理财产品就可以了。如果更高的利率那就更可怕的数据了。 )
 
 // 计算的函数
 function compute(rate) {
   for (let i=1; i<=years; i++) {
     allMoney = allMoney * rate;
+    // console.log('now year', i, 'now money', allMoney);
   }
-  console.log('now year', i, 'now money', allMoney);
   return allMoney;
 }
+console.log('compute function result is', compute(rate));
 
-console.log(compute(rate));
+// or 
+function resursionCompute(rates, years) {
+	if (years == 1) {
+		return rates;
+	} else {
+		years --;
+		return resursionCompute(rate * rates, years)
+	}
+}
+console.log('resursionCompute function result is', firstMoney * resursionCompute(rate, years));
 
 // now year-----> 1 now money-----> 4200000
 // now year-----> 2 now money-----> 4410000
