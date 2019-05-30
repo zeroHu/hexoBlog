@@ -83,6 +83,18 @@ console.log(secondPerson);
 //   hobbies: ['sports', 'cooking']
 // }
 ```
- 
+![stack store and heap store](http://static.zeroyh.cn/599584-8e93616d7afcf811.png)
+
+
+| 栈内存 | 堆内存 |
+| ------- | ------- |
+| 存储基本类型 | 存储引用类型 |
+| 按值访问 | 按引用访问 |
+| 存储的值大小固定 | 存储的值大小不固定，可动态调整 |
+| 由系统自动分配空间 |  由程序员代码分配|
+| 主要用来执行程序 | 主要用来存放对象 |
+| 空间小，运行效率高 | 空间大，但运行效率略低 |
+| 先进后出，后进先出 | 无存储顺序，按照引用直接取 |
+
 ** the stack is different with heap place in the memory , the stack value is very fast to get or set. and the heap is longer than stack **
 
