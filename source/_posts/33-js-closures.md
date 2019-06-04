@@ -6,8 +6,7 @@ keywords: closures, 闭包
 ---
 ### closures
 first we should know closures is what ?
-> the MDN explain that a closure is the combination of a function and the lexical environment within which that function was declared
-  and i'm sure that you have use closure in your code everywhere. maybe you don't know that but it's obvious.
+> the MDN explain that a closure is the combination of a function and the lexical environment within which that function was declared. and i'm sure that you have use closure in your code everywhere. maybe you don't know that but it's obvious.
 
 #### a function that returns a function
 ```javascript

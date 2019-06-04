@@ -135,3 +135,6 @@ NaN == undefined // false
 NaN == NaN // false
 // we can use isNaN test the value is NaN 
 ```
+**reference doc**
+> [brandon morelli](https://codeburst.io/javascript-double-equals-vs-triple-equals-61d4ce5a121a)
+> [promise tochi](https://dev.to/promhize/what-you-need-to-know-about-javascripts-implicit-coercion-e23)
