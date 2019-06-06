@@ -84,6 +84,17 @@ console.log(hobbies); // play
 // but when you use let is different with var, the result same as the function scope. certainly explain that the block scope
 ```
 #### lexical scope
+```javascript
+var value = 1
+function foo() {
+  console.log(value); // 1
+}
+function bar(){
+  var value = 2
+  foo()
+}
+bar();
+```
 
 **reference doc**
 > [brandon Morelli](https://codeburst.io/javascript-functions-understanding-the-basics-207dbf42ed99)
