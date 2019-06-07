@@ -10,7 +10,7 @@ keywords: js 函数作用域， 块作用域，词法作用域，scope, function
 * function is a subprogram designed to perform a particular task.
 * function is executed when they are called. this is known as invoking a function
 * values can be passed in function and used within the function
-* functions always return a value, in js if function no `return` code, in fact the function return `unefined` see the example 1
+* functions always return a value, in js if function no `return` code, in fact the function return `undefined` see the example 1
 * function are objects
 * function scope use variable is cannot use in out of the function
 
