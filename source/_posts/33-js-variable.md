@@ -1,11 +1,11 @@
 ---
 title: js 传值方式
 date: 2018-04-13 11:29:13
-tags: JsHighLeval
+tags: 33-js-concepts
 ---
 ### 挖掘js 传值方式
 #### 值的存储方式 （[图的来源](https://yangbo5207.github.io/wutongluo/ji-chu-jin-jie-xi-lie/yi-3001-nei-cun-kong-jian-xiang-jie.html))
-![变量的存储](http://upload-images.jianshu.io/upload_images/599584-8e93616d7afcf811.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![变量的存储](http://static.zeroyh.cn/599584-cce8e155e19593fb.png)
 #### 几个小栗子
 ```javascript
 // 基本类型
