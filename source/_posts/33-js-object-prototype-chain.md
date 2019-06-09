@@ -1,5 +1,5 @@
 ---
-title: 对象，原型，原型链
+title: 33-js-object-prototype-chain
 date: 2017-10-19 15:19:06
 tags: 33-js-concepts
 keywords: prototype，__proto__，对象，原型，原型链，实例与原型关系，构造函数，面向对象程序设计，工厂模式

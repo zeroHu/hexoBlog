@@ -1,5 +1,5 @@
 ---
-title: js 传值方式
+title: 33-js-value-传值
 date: 2018-04-13 11:29:13
 tags: 33-js-concepts
 ---

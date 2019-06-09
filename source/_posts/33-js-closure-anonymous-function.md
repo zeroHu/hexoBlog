@@ -1,5 +1,5 @@
 ---
-title: 闭包 和 匿名函数
+title: 33-js-closures-anonymousFunction
 date: 2018-03-29 17:58:56
 tags: 33-js-concepts
 keywords: js closures, anonymous function，闭包，匿名函数

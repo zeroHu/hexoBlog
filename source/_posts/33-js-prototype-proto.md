@@ -1,5 +1,5 @@
 ---
-title: prototype __proto__ 的区别和联系
+title: 33-js-prototype and __proto__ 
 date: 2018-03-29 11:08:53
 tags: 33-js-concepts
 keywords: prototype __proto__ 的区别和联系
