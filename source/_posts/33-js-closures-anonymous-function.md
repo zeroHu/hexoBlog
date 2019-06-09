@@ -1,12 +1,16 @@
 ---
-title: 33-js-closures
-date: 2019-05-13 14:45:53
+title: 33-js-closures-anonymousFunction
+date: 2018-03-29 17:58:56
 tags: 33-js-concepts
-keywords: closures, 闭包
+keywords: js closures, anonymous function，闭包，匿名函数
 ---
-### closures
-first we should know closures is what ?
-> the MDN explain that a closure is the combination of a function and the lexical environment within which that function was declared. and i'm sure that you have use closure in your code everywhere. maybe you don't know that but it's obvious.
+### 闭包和匿名函数的区别和关系，使用场景
+
+#### 闭包
+> <font color="blue">就是在一个函数内部创建另一个函数。或者说闭包是函数的嵌套，就是内层的函数可以访问外层函数的所有变量，即使外层函数已经执行完毕（涉及到javascript的作用域链）【忘了谁的博客】</font>
+> <font color="#ff9090">闭包就是当一个函数即使是在它的词法作用域外被调用时，也可以记住并访问它的词法作用域。【you don't know js】</font>
+> <font color="red">闭包指的是有权访问另一个函数作用域中的变量 【js 高程】</font>
+> <font color="#333">a closure is the combination of a function and the lexical environment within which that function was declared. and i'm sure that you have use closure in your code everywhere. maybe you don't know that but it's obvious. </font>【MDN】
 
 #### a function that returns a function
 ```javascript
@@ -53,7 +57,81 @@ console.log(c1, c2, c3);
 ```
 **the closure is a collection of all the variables in scope at the time of createion of the function**
 
+##### 典型的闭包示例
+```javascript
+var scope = "global scope";
+function checkscope(){
+    var scope = "local scope";
+    function f(){
+        return scope;
+    }
+    return f;
+}
+
+var foo = checkscope();
+foo();
+
+// 分析一下
+ES = [globalContext, checkscopeContext, fContext]
+fContext.scope = [AO, checkscopeContext.AO, globalContext.VO]
+```
+##### 闭包解决之难题
+```javascript
+// 闭包只能取得包含函数中任何变量的最 后一个值
+function jisu () {
+    var result = [];
+    for (var i =0; i<10; i++) {
+        result[i] = function () {
+            return i;
+        }
+    }
+    result[8](); //10
+}
+// 改成能够实现的函数
+function jisu () {
+    var result = [];
+    for (var i =0;i<10;i++) {
+        result[i] = function (num) {
+            return function () {
+                return num;
+            }
+        }(i)
+    }
+    result[8](); //8
+}
+// 闭包写外面
+function jisu () {
+    function test(i) {
+        return function() {
+            console.log(i)
+        }
+    }
+    var result = [];
+    for (var i=0; i<10; i++) {
+        result[i] = test(i)
+    }
+    result[8](); //8
+}
+```
+#### 匿名函数
+> javascript中最灵活的一种对象，最简单的理解就是：没有名字的函数
+
+##### 栗子
+```javascript
+function () {
+    return 'hello'
+}
+
+(function() {
+    alert('something')
+})()
+
+(function() {
+    alert('other')
+}())
+```
 **reference doc**
+> [参考地址](https://github.com/mqyqingfeng/Blog/issues/9)
 > [dailyjs](https://medium.com/dailyjs/i-never-understood-javascript-closures-9663703368e8)
 > [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 > [jsinfo](https://zh.javascript.info/closure)
