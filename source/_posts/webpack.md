@@ -197,6 +197,7 @@ module.exports = {
 
 #### 清理dist文件夹
 > 建议在每次build 之前清理dist目录能够保证dist比较干净整洁
+
 用 clean-webpack-plugin
 webpack.config.js
 ```javascript
@@ -347,6 +348,7 @@ export function square (x) {
 
 #### 精简输出
 > 我们已经通过了`import`和`export`方法，标志了那些未引用的代码，但是我们需要从bundle中删除它们，我们将添加一个工具删除未引用的代码的工具，`UglifyJSPlugin`
+
 npm install -D uplifyjs-webpack-plugin
 webpack.config.js
 ```javascript
