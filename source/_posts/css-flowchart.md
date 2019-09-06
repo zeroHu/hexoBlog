@@ -10,6 +10,8 @@ tags: css, css流程图，css flowchart, css flow, 流程图, css 流程图
 
 #### 01
 
+[effect image](http://static.zeroyh.cn/flowchart-1.png)
+
 ```html
 <div id="wrapper">
     <span class="label">Root</span>
