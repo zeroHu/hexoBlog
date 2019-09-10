@@ -8,7 +8,7 @@ tags: css, css流程图，css flowchart, css flow, 流程图, css 流程图
 
 > In the longtime, I think the flowchart is difficult for me. so when I see the article by chance. so exciting !!! by the way, no one is write by myself. crying...
 
-#### 01
+#### 01 Lateral flowchart（侧向流程图）
 
 ![effect image](http://static.zeroyh.cn/flowchart-1.png)
 
@@ -187,6 +187,208 @@ body {
     left: 0;
     top: 50%;
     margin-top: -15px;
+}
+```
+
+[effect address](http://www.zeroyh.cn/css/cssMagic/cssFlowchart.html)
+
+#### 02 Stand flowchart (竖向流程图)
+
+![effect image](http://static.zeroyh.cn/cssflowchart2.png)
+
+```html
+<nav class="nav">
+    <ul>
+        <li>
+            <a href="#">Home</a>
+            <ul>
+                <li>
+                    <a href="#">Lab</a>
+                    <ul>
+                        <li>
+                            <a href="#">Code</a>
+                            <ul>
+                                <li>
+                                    <a href="#">Html</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Css</a>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Jquery</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Graph</a>
+                            <ul>
+                                <li>
+                                    <a href="#">Image</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Design</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Blog</a>
+                    <ul>
+                        <li>
+                            <a href="#">Category</a>
+                            <ul>
+                                <li>
+                                    <a href="#">Code</a>
+                                </li>
+                                <li>
+                                    <a href="#">Graph</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                    <ul>
+                        <li>
+                            <a href="#">Vcard</a>
+                        </li>
+                        <li>
+                            <a href="#">Map</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+```
+
+```css
+* {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+}
+
+h1 {
+    padding-top: 40px;
+
+    color: #ccc;
+    text-align: center;
+    font-size: 1.8rem;
+
+    text-shadow: rgba(0, 0, 0, 0.6) 1px 0, rgba(0, 0, 0, 0.6) 1px 0,
+        rgba(0, 0, 0, 0.6) 0 1px, rgba(0, 0, 0, 0.6) 0 1px;
+}
+
+.nav {
+    margin: 20px auto;
+    width: 505px;
+    min-height: auto;
+}
+
+.nav ul {
+    position: relative;
+    padding-top: 20px;
+}
+
+.nav li {
+    position: relative;
+    padding: 20px 3px 0 3px;
+    float: left;
+
+    text-align: center;
+    list-style-type: none;
+}
+
+.nav li::before,
+.nav li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    width: 50%;
+    height: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.nav li::after {
+    left: 50%;
+    right: auto;
+
+    border-left: 1px solid #ccc;
+}
+
+.nav li:only-child::after,
+.nav li:only-child::before {
+    content: '';
+    display: none;
+}
+
+.nav li:only-child {
+    padding-top: 0;
+}
+
+.nav li:first-child::before,
+.nav li:last-child::after {
+    border: 0 none;
+}
+
+.nav li:last-child::before {
+    border-right: 1px solid #ccc;
+    border-radius: 0 5px 0 0;
+}
+
+.nav li:first-child::after {
+    border-radius: 5px 0 0 0;
+}
+
+.nav ul ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 1px solid #ccc;
+    width: 0;
+    height: 20px;
+}
+
+.nav li a {
+    display: inline-block;
+    padding: 5px 10px;
+
+    border-radius: 5px;
+    border: 1px solid #ccc;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ccc;
+    font-family: arial, verdana, tahoma;
+    font-size: 11px;
+}
+
+.nav li a:hover,
+.nav li a:hover + ul li a {
+    color: #000;
+    background: #c8e4f8;
+    border: 1px solid #94a0b4;
+}
+
+.nav li a:hover + ul li::after,
+.nav li a:hover + ul li::before,
+.nav li a:hover + ul::before,
+.nav li a:hover + ul ul::before {
+    content: '';
+    border-color: #94a0b4;
 }
 ```
 
