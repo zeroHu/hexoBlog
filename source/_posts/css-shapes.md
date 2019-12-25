@@ -68,6 +68,32 @@ keywords: css shapes, css 三角形， css 正方形， css 下拉三角， css 
     border-top: 100px solid green;
 }
 ```
+#### Triangle up and down 空心箭头
+```scss
+.triangle{ 
+   position: absolute;  // 控制位置
+   margin-left: 220px;
+   margin-top: 10px;
+  .inner-down {  //空心下拉箭头
+    width: 8px;
+    height: 8px;
+    border: 1px solid #CACFD2;
+    border-width: 1px 1px 0 0;
+    transform: rotate(135deg);
+    margin-bottom: 10px;
+    margin-top: -5px;
+  }
+  .inner-up {  //空心上拉箭头
+    width: 8px;
+    height: 8px;
+    border: 1px solid #CACFD2;
+    border-width: 0 0 1px 1px;
+    transform: rotate(135deg);
+    margin-bottom: 10px;
+  }
+}
+```
+
 #### Triangle Up
 ![正三角形](http://upload.zeroyh.cn/triangle-up.jpg)
 ```css
