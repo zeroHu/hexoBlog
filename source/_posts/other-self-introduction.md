@@ -20,8 +20,8 @@ keywords: zero self introduction, zero, zero blog, who is zero
     "sport": [
       "PINGPONG",
       "SKI",
-      "Roller",
-      "Badminton",
+      "SKATE",
+      "BADMINTON",
       "And more for a simple people must have"
     ],
     "work": [

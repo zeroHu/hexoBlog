@@ -1,7 +1,8 @@
 ---
 title: css-flowchart
 date: 2019-09-06 18:11:22
-tags: css, css流程图，css flowchart, css flow, 流程图, css 流程图
+tags: css
+keywords: css, css流程图，css flowchart, css flow, 流程图, css 流程图
 ---
 
 ### css flowchar
@@ -113,7 +114,7 @@ body {
     margin-left: 250px;
 }
 .branch:before {
-    content: '';
+    content: "";
     width: 50px;
     border-top: 2px solid #eee9dc;
     position: absolute;
@@ -127,14 +128,14 @@ body {
     min-height: 60px;
 }
 .entry:before {
-    content: '';
+    content: "";
     height: 100%;
     border-left: 2px solid #eee9dc;
     position: absolute;
     left: -50px;
 }
 .entry:after {
-    content: '';
+    content: "";
     width: 50px;
     border-top: 2px solid #eee9dc;
     position: absolute;
@@ -312,7 +313,7 @@ h1 {
 
 .nav li::before,
 .nav li::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     right: 50%;
@@ -330,7 +331,7 @@ h1 {
 
 .nav li:only-child::after,
 .nav li:only-child::before {
-    content: '';
+    content: "";
     display: none;
 }
 
@@ -353,7 +354,7 @@ h1 {
 }
 
 .nav ul ul::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 50%;
@@ -387,7 +388,7 @@ h1 {
 .nav li a:hover + ul li::before,
 .nav li a:hover + ul::before,
 .nav li a:hover + ul ul::before {
-    content: '';
+    content: "";
     border-color: #94a0b4;
 }
 ```

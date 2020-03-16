@@ -1,13 +1,13 @@
 ---
 title: css-icons
 date: 2019-09-11 10:21:45
-tags: css，转圈圈，css加载动画，加载，loading
+tags: css
+keywords: css 图标
 ---
 
 ### cssIcon
 
-> [效果查看地址](http://www.zeroyh.cn/css/shape/icons.html)
-> ![图片预览效果](http://static.zeroyh.cn/icons-1.jpg)
+> [效果查看地址](http://www.zeroyh.cn/css/shape/icons.html) > ![图片预览效果](http://static.zeroyh.cn/icons-1.jpg)
 
 #### flip
 
@@ -62,7 +62,7 @@ tags: css，转圈圈，css加载动画，加载，loading
     height: 64px;
 }
 .lds-dual-ring:after {
-    content: ' ';
+    content: " ";
     display: block;
     width: 46px;
     height: 46px;
@@ -158,7 +158,7 @@ tags: css，转圈圈，css加载动画，加载，loading
 }
 .lds-heart div:after,
 .lds-heart div:before {
-    content: ' ';
+    content: " ";
     position: absolute;
     display: block;
     width: 26px;
@@ -267,7 +267,7 @@ tags: css，转圈圈，css加载动画，加载，loading
     transform-origin: 32px 32px;
 }
 .lds-roller div:after {
-    content: ' ';
+    content: " ";
     display: block;
     position: absolute;
     width: 6px;
@@ -532,7 +532,7 @@ tags: css，转圈圈，css加载动画，加载，loading
     height: 64px;
 }
 .lds-hourglass:after {
-    content: ' ';
+    content: " ";
     display: block;
     border-radius: 50%;
     width: 0;
@@ -634,7 +634,7 @@ tags: css，转圈圈，css加载动画，加载，loading
     animation: lds-spinner 1.2s linear infinite;
 }
 .lds-spinner div:after {
-    content: ' ';
+    content: " ";
     display: block;
     position: absolute;
     top: 3px;
