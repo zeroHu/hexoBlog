@@ -3,17 +3,19 @@ title: wechat-token
 date: 2017-12-02 16:11:53
 tags: wechat
 ---
+
 #### 如何填写微信公众号的基本配置
-![wehchat-token](http://static.zeroyh.cn/wechat-token.jpeg)
 
-##### 设置这个服务器的token
+![wechat-token](http://static.zeroyh.cn/wechat-token.jpeg)
 
-> 这个token虽然文档里面都是说是你自己设置的 ，为了验证。。。。然后天真无邪（傻逼）的我就认为我随便写点啥就行了，然后点击确定的时候就发现要么服务器报错，要么token错误。。。我心想为啥自己随便起的还会错误。。。才知道是需要取你填写的url里面验证的。。。。。。
+##### 设置这个服务器的 token
 
-> 下面的是nodejs 验证token的方式。运行在服务器，配置正确就行，然后点击 在微信公众号输入 url token 。。。 点击。。。终于成功了
+> 这个 token 虽然文档里面都是说是你自己设置的 ，为了验证。。。。然后天真无邪（傻逼）的我就认为我随便写点啥就行了，然后点击确定的时候就发现要么服务器报错，要么 token 错误。。。我心想为啥自己随便起的还会错误。。。才知道是需要取你填写的 url 里面验证的。。。。。。
 
+> 下面的是 nodejs 验证 token 的方式。运行在服务器，配置正确就行，然后点击 在微信公众号输入 url token 。。。 点击。。。终于成功了
 
 nodejs 代码
+
 ```javascript
 // checkSignature.js
 /**
@@ -23,17 +25,14 @@ nodejs 代码
  *    3. 开发者获得加密后的字符串可与signature对比，标识该请求来源于微信
  */
 
-
-const http = require('http');
-const url = require('url');
-const crypto = require('crypto');
-
+const http = require("http");
+const url = require("url");
+const crypto = require("crypto");
 
 // Web 服务器端口
 const port = 3006;
 // 微信公众平台服务器配置中的 Token
-const token = 'thisisjszeroyhcntokenonly';
-
+const token = "thisisjszeroyhcntokenonly";
 
 /**
  *  对字符串进行sha1加密
@@ -41,10 +40,10 @@ const token = 'thisisjszeroyhcntokenonly';
  * @return {string}     加密后的字符串
  */
 function sha1(str) {
-  const md5sum = crypto.createHash('sha1');
-  md5sum.update(str);
-  const ciphertext = md5sum.digest('hex');
-  return ciphertext;
+    const md5sum = crypto.createHash("sha1");
+    md5sum.update(str);
+    const ciphertext = md5sum.digest("hex");
+    return ciphertext;
 }
 
 /**
@@ -54,38 +53,39 @@ function sha1(str) {
  * @return {object}     验证结果
  */
 function checkSignature(req, res) {
-  const query = url.parse(req.url, true).query;
-  console.log('Request URL: ', req.url);
-  const signature = query.signature;
-  const timestamp = query.timestamp;
-  const nonce = query.nonce;
-  const echostr = query.echostr;
-  console.log('timestamp: ', timestamp);
-  console.log('nonce: ', nonce);
-  console.log('signature: ', signature);
-  // 将 token/timestamp/nonce 三个参数进行字典序排序
-  const tmpArr = [token, timestamp, nonce];
-  const tmpStr = sha1(tmpArr.sort().join(''));
-  console.log('Sha1 String: ', tmpStr);
-  // 验证排序并加密后的字符串与 signature 是否相等
-  if (tmpStr === signature) {
-    // 原样返回echostr参数内容
-    res.end(echostr);
-    console.log('Check Success');
-  } else {
-    res.end('failed');
-    console.log('Check Failed');
-  }
+    const query = url.parse(req.url, true).query;
+    console.log("Request URL: ", req.url);
+    const signature = query.signature;
+    const timestamp = query.timestamp;
+    const nonce = query.nonce;
+    const echostr = query.echostr;
+    console.log("timestamp: ", timestamp);
+    console.log("nonce: ", nonce);
+    console.log("signature: ", signature);
+    // 将 token/timestamp/nonce 三个参数进行字典序排序
+    const tmpArr = [token, timestamp, nonce];
+    const tmpStr = sha1(tmpArr.sort().join(""));
+    console.log("Sha1 String: ", tmpStr);
+    // 验证排序并加密后的字符串与 signature 是否相等
+    if (tmpStr === signature) {
+        // 原样返回echostr参数内容
+        res.end(echostr);
+        console.log("Check Success");
+    } else {
+        res.end("failed");
+        console.log("Check Failed");
+    }
 }
 
-
-const server = http.createServer(checkSignature)
+const server = http.createServer(checkSignature);
 server.listen(port, () => {
-  console.log(`Server is runnig ar port ${port}`);
-  console.log('Start Checking...');
+    console.log(`Server is runnig ar port ${port}`);
+    console.log("Start Checking...");
 });
 ```
+
 nginx 配置
+
 ```nginx
 upstream nodejs {
     server 127.0.0.1:3333;
@@ -109,5 +109,3 @@ server {
 ```
 
 > 原文地址:https://github.com/nodejh/nodejh.github.io/issues/24
-
-
