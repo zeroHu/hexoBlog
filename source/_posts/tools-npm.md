@@ -9,7 +9,7 @@ keywords: npm 全局安装了哪些包， npm global packages
 
 #### 查看 npm 全局安装了哪里工具
 
-`npm list -g --depath 0`
+`npm list -g --depth 0`
 
 > explain the command line
 
