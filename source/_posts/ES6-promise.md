@@ -1,3 +1,4 @@
+
 ---
 title: es6-promise
 date: 2017-07-10 19:14:47

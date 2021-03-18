@@ -1,8 +1,8 @@
 ---
-title: interest-code
+title: JavaScript algorithm
 date: 2017-10-10 15:44:48
 tags: javascript
-keywords: 经典算法，冒泡排序，快排
+keywords: javascript算法，经典算法，冒泡排序，快排，选择排序
 ---
 
 ### 好玩的算法逻辑题总汇
