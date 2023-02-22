@@ -37,3 +37,34 @@ fetch('http://localhost:9000/test')
     window.URL.revokeObjectURL(downloadURL)
   })
 ```
+
+#### node 端生成 xlsx 文件存储到文件，接口返回
+
+```javascript
+// 生成xlsx文件
+let buffer = xlsx.build([
+  {
+    name: 'sheet1',
+    data: xlsxData,
+  },
+])
+
+// 写入生成excel到文件夹
+fs.writeFileSync(path.resolve(__dirname, `files/${fileName}`), buffer, {
+  flag: 'w',
+})
+
+// 接口返回代碼，将文件夹中的xlsx文件返回
+const filePath = path.resolve('/files', fileName)
+const send = require('koa-send')
+
+ctx.attachment(filePath)
+ctx.set('Content-disposition', `attachment;filename="${fileName}"`)
+await send(ctx, filePath)
+```
+
+#### 前端直接 a 标签获取
+
+```javascript
+<a href="xxxxxx" download>下载</a>
+```

@@ -41,7 +41,7 @@ function Decrypt(word) {
 ```javascript
 const NodeRSA = require('node-rsa')
 const publicKey = 'xxxxxxxxxxxxxx'
-const privateKeyObj = 'xxxxxxxxxxxxxxxxx'
+const privateKey = 'xxxxxxxxxxxxxxxxx'
 // 加密
 function encrypted(str) {
   const publicKeyObj = new NodeRSA(publicKey)
