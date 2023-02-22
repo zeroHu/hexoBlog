@@ -55,8 +55,8 @@ function encrypted(str) {
 function decrypted(str) {
   const privateKeyObj = new NodeRSA(privateKey)
   privateKeyObj.setOptions({ encryptionScheme: 'pkcs1' })
+  
   const decrypted = privateKeyObj.decrypt(str, 'utf8')
-
   return JSON.parse(decrypted)
 }
 ```
